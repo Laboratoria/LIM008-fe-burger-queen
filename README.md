@@ -2,7 +2,7 @@
 
 ## Preámbulo
 
-[React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
+[React](https://reactjs.org/) y [Angular](https://angular.io/)
 son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
 lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
 En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
@@ -85,7 +85,7 @@ costo total.
 ## Objetivos de aprendizaje
 
 1. El objetivo principal de es aprender a construir una _interfaz web_ usando
-el _framework_ elegido (React, Vue o Angular). Todos estos frameworks de
+el _framework_ elegido (React o Angular). Todos estos frameworks de
 Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado
 sincronizados**. Así que esta experiencia espera familiarizarte con el concepto
 de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
@@ -102,7 +102,7 @@ proyecto.
 3. Finalmente, la interfaz debe estar diseñada específicamente para correr en
 **tablets**.
 
-Tópicos: _react_, _angular_, _vue_, _pwa_, _offline-first_, _service-worker_.
+Tópicos: _react_, _angular_, _pwa_, _offline-first_, _service-worker_.
 
 ## Consideraciones
 
@@ -114,7 +114,7 @@ hasta la historia que puedas en el tiempo especificado.
 La lógica del proyecto debe estar implementada completamente en JavaScript
 (ES6+), HTML y CSS y empaquetada de manera automatizada.
 En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://reactjs.org/), [Vue](https://vuejs.org/) o
+(debes elegir entre [React](https://reactjs.org/) o
 [Angular](https://angular.io/)).
 
 La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
@@ -370,7 +370,6 @@ cd burger-queen
 ### Frameworks / libraries
 
 * [React](https://reactjs.org/)
-* [Vue](https://vuejs.org/)
 * [Angular](https://angular.io/)
 
 ### Herramientas
