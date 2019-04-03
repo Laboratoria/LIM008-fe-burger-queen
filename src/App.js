@@ -52,7 +52,7 @@ class App extends Component {
           name = "table_number"
           onChange={this.updateInput}
           value={this.state.table_number}></input>
-          <button className = "margin btn" type = "submit">Gardar</button>
+          <button className = "margin btn" type = "submit">Guardar</button>
         </div>
         <div className = "App-header">
           <p>Desarrollado por SoftInPeru</p>
