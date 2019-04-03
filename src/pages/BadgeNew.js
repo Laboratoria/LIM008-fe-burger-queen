@@ -1,8 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbar'
 class BadgeNew extends React.Component {
     render() {
         return (
-            <h1>Badge New</h1>
+            <div>
+                <Navbar/>
+            </div>
         )
     }
 }
