@@ -1,4 +1,14 @@
 [{
+    "name": "Café con leche",
+    "value": 7.00,
+    "option": "Bebidas",
+    "type": "Desayuno"
+  },{
+  "name": "Café americano",
+  "value": 5.00,
+  "option": "Bebidas",
+  "type": "Desayuno"
+    },{
   "name": "Hamburguesa simple de res",
   "value": 10.00,
   "option": "Hamburguesa simple",
@@ -44,9 +54,29 @@
   "option": "Bebidas",
   "type": "Resto del día"
   },{
-  "title": "Agua 500 mL",
-  "value": 5.00,
+  "title": "Agua 750 mL",
+  "value": 8.00,
   "option": "Bebidas",
+  "type": "Resto del día"
+  },{
+  "title": "Gaseosa 500 mL",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Resto del día"
+  },{
+  "title": "Gaseosa 750 mL",
+  "value": 10.00,
+  "option": "Bebidas",
+  "type": "Resto del día"
+  },{
+  "title": "Queso",
+  "value": 1.00,
+  "option": "Adicional",
+  "type": "Resto del día"
+  },{
+  "title": "Huevo",
+  "value": 1.00,
+  "option": "Adicional",
   "type": "Resto del día"
     }]
 
