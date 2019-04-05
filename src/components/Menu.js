@@ -1,57 +1,65 @@
 import React from 'react';
+import menu from '../data/menu'
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props);
+
+  constructor() {
+    super();
     this.state = {
-      items: [],
-      isLoaded: false,
+      menu: menu
     }
   }
 
-  componentDidMount() {
-    fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/developer/src/data/menu.json')
-    .then(res => res.json())
-    .then(json => {
-      this.setState({
-        isLoaded: true,
-        items:json,
-      })
+  render() {
+    const menu = this.state.menu.menu.map((item, i) => {
+      return (
+        <div>
+          <button>{item.title} - {item.value}</button>
+        </div>
+      )
     })
+
+    return (
+      <div>
+        {menu}
+      </div>  
+      )
   }
-  // constructor() {
-  //   super();
+    // constructor(props) {
+  //   super(props);
   //   this.state = {
-  //     menu: menu
+  //     items: [],
+  //     isLoaded: false,
   //   }
   // }
 
+  // componentDidMount() {
+  //   fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/developer/src/data/menu.json')
+  //   .then(res => res.json())
+  //   .then(json => {
+  //     this.setState({
+  //       isLoaded: true,
+  //       items:json,
+  //     })
+  //   })
+  // }
   // render() {
-  //   const menu = this.state.menu.map((item, i) => {
-  //     return (
+  //   let{isLoaded, items} = this.state;
+  //   if(!isLoaded) {
+  //     return <div>Loading...</div>
+  //   }
+  //   else {
+  //     return(
   //       <div>
-  //         {item.title}
+  //         <ul>
+  //           {items.map(item => (
+  //           <li key={item.title}>
+  //           {item.value}</li>))}
+  //         </ul>
   //       </div>
   //     )
-  //   })
-
-  //   return (
-  //     <div>
-  //       {menu}
-  //     </div>  
-  //     )
-  // }
-  render() {
-    let{isLoaded, items} = this.state;
-    if(!isLoaded) {
-      return <div>Loading...</div>
-    }
-    else {
-      return(
-        <div>Data has been loaded</div>
-      )
-    }
+  //   }
    
-  }
+  // }
 }
 export default Menu;
