@@ -1,5 +1,4 @@
 import React from 'react';
-import menu from '../data/menu';
 
 class Menu extends React.Component {
   // constructor() {
@@ -53,8 +52,11 @@ class Menu extends React.Component {
       <div>
         <ul>
           {items.map(item => (
-            <li key={item.title}>
-              {item.value}
+            <li>
+              <button type="button">
+                {item.title}
+                {item.value}
+              </button>
             </li>
           ))}
         </ul>

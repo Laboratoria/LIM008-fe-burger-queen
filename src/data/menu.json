@@ -1,19 +1,29 @@
 [{
-    "name": "Café con leche",
-    "value": 7.00,
-    "option": "Bebidas",
-    "type": "Desayuno"
-  },{
+  "name": "Sandwich de jamon y queso",
+  "value": 10.00,
+  "option": "Sandwich",
+  "type": "Desayuno"
+},{
+  "name": "Jugo Natural",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Desayuno"
+},{
+  "name": "Café con leche",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Desayuno"
+},{
   "name": "Café americano",
   "value": 5.00,
   "option": "Bebidas",
   "type": "Desayuno"
-    },{
+},{
   "name": "Hamburguesa simple de res",
   "value": 10.00,
   "option": "Hamburguesa simple",
   "type": "Resto del día"
-  },{
+},{
   "title": "Hamburguesa simple de pollo",
   "value": 10.00,
   "option": "Hamburguesa simple",
