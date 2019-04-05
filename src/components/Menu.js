@@ -50,16 +50,13 @@ class Menu extends React.Component {
 
     return (
       <div>
-        <ul>
-          {items.map(item => (
-            <li>
-              <button type="button">
-                {item.title}
-                {item.value}
-              </button>
-            </li>
-          ))}
-        </ul>
+        {items.map(item => (
+          <div>
+            {item.name}
+            {item.value}
+            <button type="button">+</button>
+          </div>
+        ))}
       </div>
     );
   }
