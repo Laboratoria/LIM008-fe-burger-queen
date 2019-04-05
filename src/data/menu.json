@@ -1,12 +1,11 @@
-{
-    "menu": [{
-        "title": "Hamburguesa simple de res",
-        "value": "10.00"
-    },{
-        "title": "Hamburguesa simple de pollo",
-        "value": "10.00"
-    },{
-        "title": "Hamburguesa simple vegetariana",
-        "value": "10.00"
-    }]
-}
+[{
+  "title": "Hamburguesa simple de res",
+  "value": "10.00"
+  },{
+  "title": "Hamburguesa simple de pollo",
+  "value": "10.00"
+  },{
+  "title": "Hamburguesa simple vegetariana",
+  "value": "10.00"
+}]
+
