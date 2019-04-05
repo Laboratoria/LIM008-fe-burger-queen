@@ -34,7 +34,7 @@ class Menu extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/developer/src/data/menu.json')
+    fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json')
     .then(res => res.json())
     .then(json => {
       this.setState({

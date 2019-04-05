@@ -1,11 +1,52 @@
 [{
-  "title": "Hamburguesa simple de res",
-  "value": "10.00"
+  "name": "Hamburguesa simple de res",
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día"
   },{
   "title": "Hamburguesa simple de pollo",
-  "value": "10.00"
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día"
   },{
   "title": "Hamburguesa simple vegetariana",
-  "value": "10.00"
-}]
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día"
+  },{
+  "title": "Hamburguesa doble de res",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día"
+  },{
+  "title": "Hamburguesa doble de pollo",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día"
+  },{
+  "title": "Hamburguesa doble vegtariana",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día"
+  },{
+  "title": "Papas fritas",
+  "value": 5.00,
+  "option": "Acompañamiento",
+  "type": "Resto del día"
+  },{
+  "title": "Aros de cebolla",
+  "value": 5.00,
+  "option": "Acompañamiento",
+  "type": "Resto del día"
+  },{
+  "title": "Agua 500 mL",
+  "value": 5.00,
+  "option": "Bebidas",
+  "type": "Resto del día"
+  },{
+  "title": "Agua 500 mL",
+  "value": 5.00,
+  "option": "Bebidas",
+  "type": "Resto del día"
+    }]
 
