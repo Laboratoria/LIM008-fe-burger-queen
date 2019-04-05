@@ -10,7 +10,14 @@ class Menu extends React.Component {
   }
 
   componentDidMount() {
-    fetch('')
+    fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/developer/src/data/menu.json')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        items:json,
+      })
+    })
   }
   // constructor() {
   //   super();
@@ -35,9 +42,16 @@ class Menu extends React.Component {
   //     )
   // }
   render() {
-    return(
-      <div></div>
-    )
+    let{isLoaded, items} = this.state;
+    if(!isLoaded) {
+      return <div>Loading...</div>
+    }
+    else {
+      return(
+        <div>Data has been loaded</div>
+      )
+    }
+   
   }
 }
 export default Menu;
