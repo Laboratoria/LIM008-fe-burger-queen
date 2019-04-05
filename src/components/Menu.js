@@ -1,8 +1,7 @@
 import React from 'react';
-import menu from '../data/menu'
+import menu from '../data/menu';
 
 class Menu extends React.Component {
-
   // constructor() {
   //   super();
   //   this.state = {
@@ -22,44 +21,45 @@ class Menu extends React.Component {
   //   return (
   //     <div>
   //       {menu}
-  //     </div>  
+  //     </div>
   //     )
   // }
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       items: [],
       isLoaded: false,
-    }
+    };
   }
 
   componentDidMount() {
     fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json')
-    .then(res => res.json())
-    .then(json => {
-      this.setState({
-        isLoaded: true,
-        items:json,
-      })
-    })
+      .then(res => res.json())
+      .then((json) => {
+        this.setState({
+          isLoaded: true,
+          items: json,
+        });
+      });
   }
+
   render() {
-    let{isLoaded, items} = this.state;
-    if(!isLoaded) {
-      return <div>Loading...</div>
+    const { isLoaded, items } = this.state;
+    if (!isLoaded) {
+      return <div>Loading...</div>;
     }
-    else {
-      return(
-        <div>
-          <ul>
-            {items.map(item => (
+
+    return (
+      <div>
+        <ul>
+          {items.map(item => (
             <li key={item.title}>
-            {item.value}</li>))}
-          </ul>
-        </div>
-      )
-    }
-   
+              {item.value}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 }
 export default Menu;

@@ -5,10 +5,9 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import BadgeNew from './pages/BadgeNew';
 import 'bootstrap/dist/css/bootstrap.css';
+
 const container = document.getElementById('root');
-ReactDOM.render(<BadgeNew/>, container);
-
-
+ReactDOM.render(<BadgeNew />, container);
 
 
 // ReactDOM.render(<App firstOption = "Ingresar nombre del cliente:" secondOption = "Ingresar número de mesa"/>, container);
