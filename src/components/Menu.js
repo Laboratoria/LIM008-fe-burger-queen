@@ -1,28 +1,6 @@
 import React from 'react';
 
 class Menu extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     menu: menu
-  //   }
-  // }
-
-  // render() {
-  //   const menu = this.state.menu.map((item, i) => {
-  //     return (
-  //       <div>
-  //         <button>{item.title} - {item.value}</button>
-  //       </div>
-  //     )
-  //   })
-
-  //   return (
-  //     <div>
-  //       {menu}
-  //     </div>
-  //     )
-  // }
   constructor(props) {
     super(props);
     this.state = {
