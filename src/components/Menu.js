@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/Menu.css';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -29,11 +30,9 @@ class Menu extends React.Component {
     return (
       <div>
         {items.map(item => (
-          <div>
-            {item.name}
-            {item.value}
-            <button type="button">+</button>
-          </div>
+          <button className="margin" type="button">
+            {`${item.name} ${item.value}`}
+          </button>
         ))}
       </div>
     );

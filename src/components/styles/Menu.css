@@ -1,0 +1,8 @@
+.margin{
+    padding: 3%;
+    width: 100%;
+    border-bottom-color: blue;
+    border-bottom-width: 10%;
+    outline: none;
+    background-color: white
+}
