@@ -22,11 +22,21 @@ export default function Menu() {
   const data = useData();
   return (
     <div>
-      {data.items.map(item => (
-        <button className="margin" type="button">
-          {`${item.name} ${item.value}`}
-        </button>
-      ))}
+      <div className="row">
+        <div className="col-6">
+          <button type="button">DESAYUNO</button>
+        </div>
+        <div className="col-6">
+          <button type="button">MENÚ</button>
+        </div>
+      </div>
+      <div>
+        {data.items.map(item => (
+          <button className="margin" type="button">
+            {`${item.name} ${item.value}`}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
