@@ -2,17 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './styles/Menu.css';
 
 function useData() {
-  const [state, setState] = useState({
-    items: [],
-  });
+  const [state, setState] = useState([]);
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json')
       .then(res => res.json())
       .then((json) => {
-        setState({
-          items: json,
-        });
+        setState(json);
       });
   });
   return state;
@@ -20,18 +16,22 @@ function useData() {
 
 export default function Menu() {
   const data = useData();
+
+  const [filter, setFilter] = useState('Desayuno');
+
+
   return (
     <div>
       <div className="row">
         <div className="col-6">
-          <button type="button">DESAYUNO</button>
+          <button type="button" onClick={() => setFilter('Desayuno')}>DESAYUNO</button>
         </div>
         <div className="col-6">
-          <button type="button">MENÚ</button>
+          <button type="button" onClick={() => setFilter('Resto del día')}>MENÚ</button>
         </div>
       </div>
       <div>
-        {data.items.map(item => (
+        {data.filter(compare => (compare.type === filter)).map(item => (
           <button className="margin" type="button">
             {`${item.name} ${item.value}`}
           </button>
