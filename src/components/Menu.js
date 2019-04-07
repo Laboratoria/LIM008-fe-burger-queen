@@ -1,41 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/Menu.css';
 
-class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false,
-    };
-  }
+function useData() {
+  const [state, setState] = useState({
+    items: [],
+  });
 
-  componentDidMount() {
+  useEffect(() => {
     fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json')
       .then(res => res.json())
       .then((json) => {
-        this.setState({
-          isLoaded: true,
+        setState({
           items: json,
         });
       });
-  }
-
-  render() {
-    const { isLoaded, items } = this.state;
-    if (!isLoaded) {
-      return <div>Loading...</div>;
-    }
-
-    return (
-      <div>
-        {items.map(item => (
-          <button className="margin" type="button">
-            {`${item.name} ${item.value}`}
-          </button>
-        ))}
-      </div>
-    );
-  }
+  });
+  return state;
 }
-export default Menu;
+
+export default function Menu() {
+  const data = useData();
+  return (
+    <div>
+      {data.items.map(item => (
+        <button className="margin" type="button">
+          {`${item.name} ${item.value}`}
+        </button>
+      ))}
+    </div>
+  );
+}

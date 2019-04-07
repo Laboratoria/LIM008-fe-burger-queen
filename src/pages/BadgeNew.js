@@ -4,6 +4,11 @@ import Orden from '../components/Orden';
 import Menu from '../components/Menu';
 
 class BadgeNew extends React.Component {
+  handleAddTodo(todo) {
+    this.setState({
+      todos: [...this.state.todos, todo]
+    })
+  }
   render() {
     return (
       <div>
