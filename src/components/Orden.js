@@ -25,7 +25,7 @@ export default function Orden(props) {
                 <td>user</td>
                 <td>User</td>
                 <td>
-                  <button type="button" className="button muted-button">Delete</button>
+                  <button type="button" className="button muted-button" onClick={() => props.deleteUser(user.id)}>Delete</button>
                 </td>
               </tr>
             ))
