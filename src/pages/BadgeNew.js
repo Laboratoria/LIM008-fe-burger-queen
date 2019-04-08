@@ -1,28 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Orden from '../components/Orden';
 import Menu from '../components/Menu';
 
-class BadgeNew extends React.Component {
-  handleAddTodo(todo) {
-    this.setState({
-      todos: [...this.state.todos, todo]
-    })
-  }
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <div className="row">
-          <div className="col-6">
-            <Menu />
-          </div>
-          <div className="col-6">
-            <Orden />
-          </div>
+const BadgeNew = () => {
+  const usersData = [
+    { id: 1, name: 'Tania', username: 'floppydiskette' },
+    { id: 2, name: 'Craig', username: 'siliconeidolon' },
+    { id: 3, name: 'Ben', username: 'benisphere' },
+  ];
+  const [users, setUsers] = useState(usersData);
+  const addUser = (user) => {
+    user.id = users.length + 1;
+    setUsers([...users, user]);
+  };
+  return (
+    <div>
+      <Navbar />
+      <div className="row">
+        <div className="col-6">
+          <Menu />
+        </div>
+        <div className="col-6">
+          <Orden users={users} />
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 export default BadgeNew;
