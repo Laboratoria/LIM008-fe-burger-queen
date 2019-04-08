@@ -18,10 +18,9 @@ const BadgeNew = () => {
   const addOrden = (name) => {
     state.filter(item => (item.name === name ? setOrden([...orden, item]) : item));
   };
-
-  // const deleteUser = (id) => {
-  //   setUsers(users.filter(user => user.id !== id));
-  // };
+  const deleteOrden = (name) => {
+    setOrden(orden.filter(item => item.name !== name));
+  };
   return (
     <div>
       <Navbar />
@@ -30,7 +29,7 @@ const BadgeNew = () => {
           <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
-          <Orden orden={orden} />
+          <Orden orden={orden} deleteOrden={deleteOrden} />
         </div>
       </div>
     </div>
