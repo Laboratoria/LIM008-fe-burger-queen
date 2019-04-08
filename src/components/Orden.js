@@ -21,8 +21,8 @@ export default function Orden(props) {
             props.orden.map(item => (
               <tr key={item.id}>
                 <td>{item.name}</td>
-                <td>{item.username}</td>
                 <td>{item.count}</td>
+                <td>{item.value}</td>
                 <td>0</td>
                 <td>
                   <button type="button" className="button muted-button">Delete</button>
