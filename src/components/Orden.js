@@ -17,15 +17,15 @@ export default function Orden(props) {
           </tr>
         </thead>
         <tbody>
-          {props.users.length > 0 ? (
-            props.users.map(user => (
+          {props.orden.length > 0 ? (
+            props.orden.map(user => (
               <tr key={user.id}>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
                 <td>user</td>
                 <td>User</td>
                 <td>
-                  <button type="button" className="button muted-button" onClick={() => props.deleteUser(user.id)}>Delete</button>
+                  <button type="button" className="button muted-button">Delete</button>
                 </td>
               </tr>
             ))
@@ -38,4 +38,5 @@ export default function Orden(props) {
       </table>
     </div>
   );
-};
+}
+// Iba dentro del boton delete onClick={() => props.deleteUser(user.id)}

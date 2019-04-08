@@ -32,7 +32,7 @@ export default function Menu(props) {
       </div>
       <div>
         {data.filter(compare => (compare.type === filter)).map(item => (
-          <button className="margin" type="button" onClick={() => props.addUser({ id: 4, name: 'Mahali', username: 'mahali' })}>
+          <button className="margin" type="button" onClick={() => props.addUser(item.name)}>
             {`${item.name} ${item.value}`}
           </button>
         ))}
