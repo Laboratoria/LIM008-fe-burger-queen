@@ -1,0 +1,60 @@
+
+
+aside{
+    background-color: #FF4500;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36.8%;
+    width: 100%;
+    margin: 0px;
+    z-index: -3;
+}
+
+.overlay{
+    background-color: #F5DB75;
+    position: absolute;
+    height: 76.7%;
+    width: 88.5%;
+    mix-blend-mode: overlay;
+    opacity: 0.99;
+    z-index: -9;
+    bottom: 0;
+    left:5.75%;
+}
+
+.input-form{
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-width {
+    width: 36.9%;
+}
+
+.input{
+    background: #F7F7F7;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.start{
+    background: #F4C903;
+    border-radius: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+    color: #F7F7F7;
+}
+
+.burger-img{
+    width: 80%;
+}

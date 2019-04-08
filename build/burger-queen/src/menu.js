@@ -1,0 +1,8 @@
+const menu = {
+    breakfast: {
+
+    },
+    lunch = {
+
+    },
+}
