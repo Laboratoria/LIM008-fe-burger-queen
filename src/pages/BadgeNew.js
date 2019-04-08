@@ -10,10 +10,9 @@ const BadgeNew = () => {
     { id: 3, name: 'Ben', username: 'benisphere' },
   ];
   const [users, setUsers] = useState(usersData);
-  // const addUser = (user) => {
-  //   user.id = users.length + 1;
-  //   setUsers([...users, user]);
-  // };
+  const addUser = (user) => {
+    setUsers([...users, user]);
+  };
 
   const deleteUser = (id) => {
     setUsers(users.filter(user => user.id !== id));
@@ -23,7 +22,7 @@ const BadgeNew = () => {
       <Navbar />
       <div className="row">
         <div className="col-6">
-          <Menu />
+          <Menu addUser={addUser} />
         </div>
         <div className="col-6">
           <Orden users={users} deleteUser={deleteUser} />

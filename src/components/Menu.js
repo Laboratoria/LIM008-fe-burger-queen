@@ -14,7 +14,7 @@ function useData() {
   return state;
 }
 
-export default function Menu() {
+export default function Menu(props) {
   const data = useData();
 
   const [filter, setFilter] = useState('Desayuno');
@@ -32,7 +32,7 @@ export default function Menu() {
       </div>
       <div>
         {data.filter(compare => (compare.type === filter)).map(item => (
-          <button className="margin" type="button">
+          <button className="margin" type="button" onClick={() => props.addUser({ id: 4, name: 'Mahali', username: 'mahali' })}>
             {`${item.name} ${item.value}`}
           </button>
         ))}
