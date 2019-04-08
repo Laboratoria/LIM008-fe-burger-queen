@@ -20,7 +20,7 @@ const BadgeNew = () => {
   //   { id: 2, name: 'Craig', username: 'siliconeidolon' },
   //   { id: 3, name: 'Ben', username: 'benisphere' },
   // ];
-  const addUser = (name) => {
+  const addOrden = (name) => {
     state.filter(item => (item.name === name ? setOrden([...orden, item]) : item));
   };
 
@@ -32,7 +32,7 @@ const BadgeNew = () => {
       <Navbar />
       <div className="row">
         <div className="col-6">
-          <Menu addUser={addUser} />
+          <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
           <Orden orden={orden} />

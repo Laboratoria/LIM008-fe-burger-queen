@@ -18,12 +18,12 @@ export default function Orden(props) {
         </thead>
         <tbody>
           {props.orden.length > 0 ? (
-            props.orden.map(user => (
-              <tr key={user.id}>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>user</td>
-                <td>User</td>
+            props.orden.map(item => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.username}</td>
+                <td>{item.count}</td>
+                <td>0</td>
                 <td>
                   <button type="button" className="button muted-button">Delete</button>
                 </td>
@@ -31,7 +31,7 @@ export default function Orden(props) {
             ))
           ) : (
             <tr>
-              <td colSpan={3}>No users</td>
+              <td colSpan={3}>No hay pedidos</td>
             </tr>
           )}  
         </tbody>
