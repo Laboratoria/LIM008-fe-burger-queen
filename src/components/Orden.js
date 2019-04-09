@@ -3,7 +3,7 @@ import './styles/Navbar.css';
 
 export default function Orden(props) {
   return (
-    <div>
+    <form>
       <div>
         <h1>ORDEN</h1>
       </div>
@@ -46,11 +46,11 @@ export default function Orden(props) {
         <tfooter>
           <tr>
             <th>TOTAL</th>
-            <th>{props.total}</th>
+            <th>{props.orden.reduce((preciototal, elemento) => preciototal + (elemento.count*elemento.value), 0)}</th>
           </tr>
         </tfooter>
       </table>
-    </div>
+    </form>
   );
 }
 // Iba dentro del boton delete onClick={() => props.deleteUser(user.id)}
