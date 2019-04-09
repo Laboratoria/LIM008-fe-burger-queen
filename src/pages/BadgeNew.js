@@ -15,12 +15,18 @@ const BadgeNew = () => {
   });
 
   const [orden, setOrden] = useState([]);
+  let total;
   const addOrden = (name) => {
     state.filter(item => (item.name === name ? setOrden([...orden, item]) : item));
+    let newTotal = 0;
+    total = orden.forEach(element => newTotal += element.value);
   };
   const deleteOrden = (name) => {
     setOrden(orden.filter(item => item.name !== name));
   };
+
+  // const [total, setTotal] = useState(0);
+  // const showTotal = () => setTotal(orden.forEach(element => newTotal += element.value));
   return (
     <div>
       <Navbar />
@@ -29,7 +35,7 @@ const BadgeNew = () => {
           <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
-          <Orden orden={orden} deleteOrden={deleteOrden} />
+          <Orden orden={orden} deleteOrden={deleteOrden} total={total} />
         </div>
       </div>
     </div>

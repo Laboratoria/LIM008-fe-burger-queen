@@ -7,6 +7,10 @@ export default function Orden(props) {
       <div>
         <h1>ORDEN</h1>
       </div>
+      <div>
+        <p>NOMBRE DE CLIENTE:</p>
+        <input type ="text"></input>
+      </div>
       <table>
         <thead>
           <tr>
@@ -23,7 +27,7 @@ export default function Orden(props) {
                 <td>{item.name}</td>
                 <td>{item.count}</td>
                 <td>{item.value}</td>
-                <td>0</td>
+                <td>{item.value}</td>
                 <td>
                   <button type="button" className="button muted-button" onClick={() => props.deleteOrden(item.name)}>Delete</button>
                 </td>
@@ -35,6 +39,12 @@ export default function Orden(props) {
             </tr>
           )}  
         </tbody>
+        <tfooter>
+          <tr>
+            <th>TOTAL</th>
+            <th>{props.total}</th>
+          </tr>
+        </tfooter>
       </table>
     </div>
   );
