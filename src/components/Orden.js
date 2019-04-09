@@ -26,12 +26,12 @@ export default function Orden(props) {
               <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>
-                  <button type="button" onClick={() => props.addCount()}>+</button>
-                  {props.count}
-                  <button type="button" onClick={() => props.decreaseCount()}>-</button>
+                  <button type="button" onClick={() => item.count += 1}>+</button>
+                  {item.count}
+                  <button type="button" onClick={() => item.count -= 1}>-</button>
                 </td>
                 <td>{item.value}</td>
-                <td>{props.count*item.value}</td>
+                <td>{item.count*item.value}</td>
                 <td>
                   <button type="button" className="button muted-button" onClick={() => props.deleteOrden(item.name)}>Delete</button>
                 </td>

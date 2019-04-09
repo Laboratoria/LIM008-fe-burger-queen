@@ -24,13 +24,13 @@ const BadgeNew = () => {
   const deleteOrden = (name) => {
     setOrden(orden.filter(item => item.name !== name));
   };
-  const [count, setCount] = useState(0);
-  const addCount = () => {
-    setCount(count + 1);
-  };
-  const decreaseCount = () => {
-    setCount(count - 1);
-  };
+  // const [count, setCount] = useState(0);
+  // const addCount = () => {
+  //   setCount(count + 1);
+  // };
+  // const decreaseCount = () => {
+  //   setCount(count - 1);
+  // };
 
   // const [total, setTotal] = useState(0);
   // const showTotal = () => setTotal(orden.forEach(element => newTotal += element.value));
@@ -42,7 +42,7 @@ const BadgeNew = () => {
           <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
-          <Orden orden={orden} deleteOrden={deleteOrden} total={total} count={count} addCount={addCount} decreaseCount={decreaseCount} />
+          <Orden orden={orden} deleteOrden={deleteOrden} total={total} />
         </div>
       </div>
     </div>
