@@ -22,13 +22,21 @@ export default function Orden(props) {
         </thead>
         <tbody>
           {props.orden.length > 0 ? (
-            props.orden.map(item => (
+            props.orden.map((item, index) => (
               <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>
-                  <button type="button" onClick={() => item.count += 1}>+</button>
+                  <button type="button" 
+                    onClick={() => {
+                      const newItem = { ...item };
+                      newItem.count += 1;
+                      props.updateItem(index, newItem) } }>+</button>
                   {item.count}
-                  <button type="button" onClick={() => item.count -= 1}>-</button>
+                  <button type="button" 
+                    onClick={() => {
+                      const newItem = { ...item };
+                      newItem.count -= 1;
+                      props.updateItem(index, newItem) }}>-</button>
                 </td>
                 <td>{item.value}</td>
                 <td>{item.count*item.value}</td>
@@ -50,6 +58,9 @@ export default function Orden(props) {
           </tr>
         </tfooter>
       </table>
+      <div>
+        <button>Enviar a cocina</button>
+      </div>
     </form>
   );
 }
