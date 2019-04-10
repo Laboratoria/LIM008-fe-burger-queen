@@ -32,20 +32,12 @@ const BadgeNew = () => {
     setUser({ customer: event.target.value });
   };
   const addUser = (e) => { 
-    e.preventDefault ();
+    e.preventDefault();
     const db = firebase.firestore();
-    db.settings({
-      timestampsInSnapshots: true
-    });
-    db.collection('users').add({
-      name: this.state.name,
-    });   
-  this.setState ({ 
-    name: '', 
-    table_number: ''
-  }); 
+    db.settings({ timestampsInSnapshots: true });
+    db.collection('users').add({ name: user.customer });   
+    setUser({ customer: '' });
   };
-
   return (
     <div>
       <Navbar />
