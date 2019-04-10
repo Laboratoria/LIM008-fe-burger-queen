@@ -1,15 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles/Navbar.css';
 
-export default function Orden(props) {
+function Orden({
+  addUser, orden, user, handleInputChange, updateItem, deleteOrden,
+}) {
   return (
-    <form onSubmit={props.addUser}>
+    <form onSubmit={addUser}>
       <div>
         <h1>ORDEN</h1>
       </div>
       <div>
         <p>NOMBRE DE CLIENTE:</p>
-        <input type="text" name="name" value={props.user.customer} onChange={props.handleInputChange}></input>
+        <input type="text" name="name" value={user.customer} onChange={handleInputChange} />
       </div>
       <table>
         <thead>
@@ -21,27 +24,37 @@ export default function Orden(props) {
           </tr>
         </thead>
         <tbody>
-          {props.orden.length > 0 ? (
-            props.orden.map((item, index) => (
+          {orden.length > 0 ? (
+            orden.map((item, index) => (
               <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>
-                  <button type="button" 
+                  <button
+                    type="button"
                     onClick={() => {
                       const newItem = { ...item };
                       newItem.count += 1;
-                      props.updateItem(index, newItem) } }>+</button>
+                      updateItem(index, newItem);
+                    }}
+                  >
+                    +
+                  </button>
                   {item.count}
-                  <button type="button" 
+                  <button
+                    type="button"
                     onClick={() => {
                       const newItem = { ...item };
                       newItem.count -= 1;
-                      props.updateItem(index, newItem) }}>-</button>
+                      updateItem(index, newItem);
+                    }}
+                  >
+                      -
+                  </button>
                 </td>
                 <td>{item.value}</td>
-                <td>{item.count*item.value}</td>
+                <td>{item.count * item.value}</td>
                 <td>
-                  <button type="button" className="button muted-button" onClick={() => props.deleteOrden(item.name)}>Delete</button>
+                  <button type="button" className="button muted-button" onClick={() => deleteOrden(item.name)}>Delete</button>
                 </td>
               </tr>
             ))
@@ -49,12 +62,16 @@ export default function Orden(props) {
             <tr>
               <td colSpan={3}>No hay pedidos</td>
             </tr>
-          )}  
+          )}
         </tbody>
         <tfooter>
           <tr>
             <th>TOTAL</th>
-            <th>{props.orden.reduce((preciototal, elemento) => preciototal + (elemento.count*elemento.value), 0)}</th>
+            <th>
+              {orden.reduce((preciototal, elemento) => preciototal
+              + (elemento.count * elemento.value),
+              0)}
+            </th>
           </tr>
         </tfooter>
       </table>
@@ -64,4 +81,14 @@ export default function Orden(props) {
     </form>
   );
 }
-// Iba dentro del boton delete onClick={() => props.deleteUser(user.id)}
+
+Orden.propTypes = {
+  addUser: PropTypes.func.isRequired,
+  orden: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  updateItem: PropTypes.func.isRequired,
+  deleteOrden: PropTypes.func.isRequired,
+  user: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+export default Orden;

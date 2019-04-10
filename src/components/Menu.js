@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles/Menu.css';
+import PropTypes from 'prop-types';
 
 function useData() {
   const [state, setState] = useState([]);
@@ -14,7 +15,7 @@ function useData() {
   return state;
 }
 
-export default function Menu(props) {
+export default function Menu({ addOrden }) {
   const data = useData();
 
   const [filter, setFilter] = useState('Desayuno');
@@ -32,7 +33,7 @@ export default function Menu(props) {
       </div>
       <div>
         {data.filter(compare => (compare.type === filter)).map(item => (
-          <button className="margin" type="button" onClick={() => props.addOrden(item.name)}>
+          <button className="margin" type="button" onClick={() => addOrden(item.name)}>
             {`${item.name} ${item.value}`}
           </button>
         ))}
@@ -40,3 +41,6 @@ export default function Menu(props) {
     </div>
   );
 }
+Menu.propTypes = {
+  addOrden: PropTypes.func.isRequired,
+};

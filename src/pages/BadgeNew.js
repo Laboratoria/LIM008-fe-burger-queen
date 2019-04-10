@@ -31,12 +31,13 @@ const BadgeNew = () => {
   const handleInputChange = (event) => {
     setUser({ customer: event.target.value });
   };
-  const addUser = (e) => { 
+  const addUser = (e) => {
     e.preventDefault();
     const db = firebase.firestore();
     db.settings({ timestampsInSnapshots: true });
-    db.collection('users').add({ name: user.customer, orden });   
+    db.collection('users').add({ name: user.customer, orden });
     setUser({ customer: '' });
+    setOrden([]);
   };
   return (
     <div>
@@ -46,7 +47,14 @@ const BadgeNew = () => {
           <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
-          <Orden orden={orden} deleteOrden={deleteOrden} updateItem={updateItem} addUser={addUser} user={user} handleInputChange={handleInputChange} />
+          <Orden
+            orden={orden}
+            deleteOrden={deleteOrden}
+            updateItem={updateItem}
+            addUser={addUser}
+            user={user}
+            handleInputChange={handleInputChange}
+          />
         </div>
       </div>
     </div>
