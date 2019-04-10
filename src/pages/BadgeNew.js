@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Orden from '../components/Orden';
 import Menu from '../components/Menu';
+import firebase from '../firestore';
 
 const BadgeNew = () => {
   const [state, setState] = useState([]);
@@ -26,6 +27,24 @@ const BadgeNew = () => {
     newItems[index] = item;
     setOrden(newItems);
   };
+  const [user, setUser] = useState({ customer: '' });
+  const handleInputChange = (event) => {
+    setUser({ customer: event.target.value });
+  };
+  const addUser = (e) => { 
+    e.preventDefault ();
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+    db.collection('users').add({
+      name: this.state.name,
+    });   
+  this.setState ({ 
+    name: '', 
+    table_number: ''
+  }); 
+  };
 
   return (
     <div>
@@ -35,7 +54,7 @@ const BadgeNew = () => {
           <Menu addOrden={addOrden} />
         </div>
         <div className="col-6">
-          <Orden orden={orden} deleteOrden={deleteOrden} updateItem={updateItem} />
+          <Orden orden={orden} deleteOrden={deleteOrden} updateItem={updateItem} addUser={addUser} user={user} handleInputChange={handleInputChange} />
         </div>
       </div>
     </div>

@@ -3,13 +3,13 @@ import './styles/Navbar.css';
 
 export default function Orden(props) {
   return (
-    <form>
+    <form onSubmit={props.addUser}>
       <div>
         <h1>ORDEN</h1>
       </div>
       <div>
         <p>NOMBRE DE CLIENTE:</p>
-        <input type ="text"></input>
+        <input type="text" name="name" value={props.user.customer} onChange={props.handleInputChange}></input>
       </div>
       <table>
         <thead>
@@ -59,7 +59,7 @@ export default function Orden(props) {
         </tfooter>
       </table>
       <div>
-        <button>Enviar a cocina</button>
+        <button type="submit">Enviar a cocina</button>
       </div>
     </form>
   );
