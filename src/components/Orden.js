@@ -36,7 +36,7 @@ function Orden({
                       newItem.count += 1;
                       updateItem(index, newItem);
                     }}
-                    data-testid={`${item.id}-update-button`}
+                    data-testid={`${index}-update-button-sum`}
                   >
                     +
                   </button>
@@ -55,7 +55,7 @@ function Orden({
                 <td>{item.value}</td>
                 <td>{item.count * item.value}</td>
                 <td>
-                  <button type="button" className="button muted-button" onClick={() => deleteOrden(item.name)}>Delete</button>
+                  <button type="button" className="button muted-button" onClick={() => deleteOrden(item.name)} data-testid={`${index}-deleteOrden-button`}>Delete</button>
                 </td>
               </tr>
             ))
