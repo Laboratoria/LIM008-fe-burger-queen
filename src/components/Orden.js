@@ -36,7 +36,7 @@ function Orden({
                       newItem.count += 1;
                       updateItem(index, newItem);
                     }}
-                    data-testid={`${item-id}-update-button`}
+                    data-testid={`${item.id}-update-button`}
                   >
                     +
                   </button>

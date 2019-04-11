@@ -15,9 +15,7 @@ function useData() {
   return state;
 }
 
-export default function Menu({ addOrden }) {
-  const data = useData();
-
+export default function Menu({ addOrden, state }) {
   const [filter, setFilter] = useState('Desayuno');
 
 
@@ -32,8 +30,8 @@ export default function Menu({ addOrden }) {
         </div>
       </div>
       <div>
-        {data.filter(compare => (compare.type === filter)).map(item => (
-          <button className="margin" type="button" onClick={() => addOrden(item.name)}>
+        {state.filter(compare => (compare.type === filter)).map((item, index) => (
+          <button className="margin" type="button" onClick={() => addOrden(item.name)} data-testid={`${index}-addOrden-button`}>
             {`${item.name} ${item.value}`}
           </button>
         ))}

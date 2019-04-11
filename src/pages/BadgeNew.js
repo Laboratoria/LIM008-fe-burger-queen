@@ -44,7 +44,7 @@ const BadgeNew = () => {
       <Navbar />
       <div className="row">
         <div className="col-6">
-          <Menu addOrden={addOrden} />
+          <Menu addOrden={addOrden} state={state} />
         </div>
         <div className="col-6">
           <Orden
