@@ -12,7 +12,7 @@ function Orden({
       </div>
       <div>
         <p>NOMBRE DE CLIENTE:</p>
-        <input type="text" name="name" value={user.customer} onChange={handleInputChange} />
+        <input type="text" name="name" value={user.customer} onChange={handleInputChange} data-testid='cliente-input' />
       </div>
       <table>
         <thead>
@@ -36,6 +36,7 @@ function Orden({
                       newItem.count += 1;
                       updateItem(index, newItem);
                     }}
+                    data-testid={`${item-id}-update-button`}
                   >
                     +
                   </button>
