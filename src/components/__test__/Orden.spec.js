@@ -1,6 +1,8 @@
 import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
+import { render, fireEvent, cleanup } from 'react-testing-library';
 import Orden from '../Orden';
+afterEach(cleanup);
+
 
 describe('Orden', () => {
   it('handleInputChange', (done) => {
@@ -16,7 +18,7 @@ describe('Orden', () => {
   });
   it('deleteOrden', (done) => {
     const deleteOrden = (name) => {
-      expect(name).not.toBe('Sandwich');
+      expect(name).toBe('Sandwich');
       done();
     };
     const { getByTestId } = render(
@@ -26,8 +28,8 @@ describe('Orden', () => {
     fireEvent.click(buttonDeleteOrden);
   });
   it('updateItem', (done) => {
-    const updateItem = (count) => {
-      expect(count).toBe(1);
+    const updateItem = (index, count) => {
+      expect(index).toBe(0);
       done();
     };
     const { getByTestId } = render(
@@ -35,5 +37,16 @@ describe('Orden', () => {
     );
     const buttonUpdateItemSum = getByTestId('0-update-button-sum');
     fireEvent.click(buttonUpdateItemSum);
+  });
+  it('updateItem', (done) => {
+    const updateItem = (index, count) => {
+      expect(index).toBe(0);
+      done();
+    };
+    const { getByTestId } = render(
+      <Orden orden={[{ name: 'Sandwich', type: 'Desayuno', value: 0, count: 0 }]} updateItem={updateItem} user={{ customer: 'customer nuevo' }} />,
+    );
+    const buttonUpdateItemSubs = getByTestId('0-update-button-subs');
+    fireEvent.click(buttonUpdateItemSubs);
   });
 });

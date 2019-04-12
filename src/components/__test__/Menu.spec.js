@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
+import { render, fireEvent, cleanup, getNodeText } from 'react-testing-library';
 import Menu from '../Menu';
+afterEach(cleanup);
 
 describe('Menu', () => {
   it('addOrden', (done) => {
@@ -11,7 +12,29 @@ describe('Menu', () => {
     const { getByTestId } = render(
       <Menu state={[{ name: 'Sandwich', type: 'Desayuno', value: 0 }]} addOrden={addOrden} />,
     );
-    const buttonAddOrden = getByTestId('0-addOrden-button');
+    const buttonAddOrden = getByTestId('addOrden-button');
     fireEvent.click(buttonAddOrden);
+  });
+  it('deberia cambiar el componente orden y mostrar data filtrada por desayuno', () => {
+
+    const { getByTestId, queryAllByTestId } = render(
+      <Menu state={[{ name: 'Sandwich', type: 'Desayuno', value: 0 }, { name: 'Hamburguesa', type: 'Resto del dia', value: 0 }]} />,
+    );
+    const buttonFilterDesayuno = getByTestId('filter-button-desayuno');
+    fireEvent.click(buttonFilterDesayuno);
+    const result = queryAllByTestId("addOrden-button");
+    expect(result.length).toBe(1);
+    expect(getNodeText(result[0])).toBe('Sandwich 0');
+  });
+  it('deberia cambiar el componente orden y mostrar data filtrada por resto del dia', () => {
+
+    const { getByTestId, queryAllByTestId } = render(
+      <Menu state={[{ name: 'Sandwich', type: 'Desayuno', value: 0 }, { name: 'Hamburguesa', type: 'Resto del día', value: 0 }]} />,
+    );
+    const buttonFilterRest = getByTestId('filter-button-restodeldia');
+    fireEvent.click(buttonFilterRest);
+    const result = queryAllByTestId("addOrden-button");
+    expect(result.length).toBe(1);
+    expect(getNodeText(result[0])).toBe('Hamburguesa 0');
   });
 });

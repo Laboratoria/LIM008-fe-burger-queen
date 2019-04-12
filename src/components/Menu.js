@@ -10,15 +10,15 @@ export default function Menu({ addOrden, state }) {
     <div>
       <div className="row">
         <div className="col-6">
-          <button type="button" onClick={() => setFilter('Desayuno')}>DESAYUNO</button>
+          <button type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
         </div>
         <div className="col-6">
-          <button type="button" onClick={() => setFilter('Resto del día')}>MENÚ</button>
+          <button type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
         </div>
       </div>
       <div>
         {state.filter(compare => (compare.type === filter)).map((item, index) => (
-          <button className="margin" type="button" onClick={() => addOrden(item.name)} data-testid={`${index}-addOrden-button`}>
+          <button key={item.id} className="margin" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button">
             {`${item.name} ${item.value}`}
           </button>
         ))}

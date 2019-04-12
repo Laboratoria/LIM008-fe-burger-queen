@@ -48,6 +48,7 @@ function Orden({
                       newItem.count -= 1;
                       updateItem(index, newItem);
                     }}
+                    data-testid={`${index}-update-button-subs`}
                   >
                       -
                   </button>
