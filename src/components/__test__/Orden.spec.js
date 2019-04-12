@@ -22,7 +22,7 @@ describe('Orden', () => {
       done();
     };
     const { getByTestId } = render(
-      <Orden orden={[{ name: 'Sandwich', type: 'Desayuno', value: 0 }]} deleteOrden={deleteOrden} user={{ customer: 'customer nuevo' }} />,
+      <Orden orden={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0 }]} deleteOrden={deleteOrden} user={{ customer: 'customer nuevo' }} />,
     );
     const buttonDeleteOrden = getByTestId('0-deleteOrden-button');
     fireEvent.click(buttonDeleteOrden);
@@ -33,7 +33,7 @@ describe('Orden', () => {
       done();
     };
     const { getByTestId } = render(
-      <Orden orden={[{ name: 'Sandwich', type: 'Desayuno', value: 0, count: 0 }]} updateItem={updateItem} user={{ customer: 'customer nuevo' }} />,
+      <Orden orden={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0, count: 0 }]} updateItem={updateItem} user={{ customer: 'customer nuevo' }} />,
     );
     const buttonUpdateItemSum = getByTestId('0-update-button-sum');
     fireEvent.click(buttonUpdateItemSum);
@@ -44,7 +44,7 @@ describe('Orden', () => {
       done();
     };
     const { getByTestId } = render(
-      <Orden orden={[{ name: 'Sandwich', type: 'Desayuno', value: 0, count: 0 }]} updateItem={updateItem} user={{ customer: 'customer nuevo' }} />,
+      <Orden orden={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0, count: 0 }]} updateItem={updateItem} user={{ customer: 'customer nuevo' }} />,
     );
     const buttonUpdateItemSubs = getByTestId('0-update-button-subs');
     fireEvent.click(buttonUpdateItemSubs);

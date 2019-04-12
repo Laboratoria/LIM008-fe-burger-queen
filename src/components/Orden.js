@@ -26,7 +26,7 @@ function Orden({
         <tbody>
           {orden.length > 0 ? (
             orden.map((item, index) => (
-              <tr key={item.id}>
+              <tr data-testid='item' key={item.id}>
                 <td>{item.name}</td>
                 <td>
                   <button
