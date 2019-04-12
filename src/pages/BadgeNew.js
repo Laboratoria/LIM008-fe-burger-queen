@@ -61,5 +61,3 @@ const BadgeNew = () => {
   );
 };
 export default BadgeNew;
-
-// estaba dentro del componente orden users={users} deleteUser={deleteUser}

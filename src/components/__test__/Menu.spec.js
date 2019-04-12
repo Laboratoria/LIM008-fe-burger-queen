@@ -1,6 +1,9 @@
 import React from 'react';
-import { render, fireEvent, cleanup, getNodeText } from 'react-testing-library';
+import {
+  render, fireEvent, cleanup, getNodeText,
+} from 'react-testing-library';
 import Menu from '../Menu';
+
 afterEach(cleanup);
 
 describe('Menu', () => {
@@ -10,30 +13,43 @@ describe('Menu', () => {
       done();
     };
     const { getByTestId } = render(
-      <Menu state={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0 }]} addOrden={addOrden} />,
+      <Menu
+        state={[{
+          id: 1, name: 'Sandwich', type: 'Desayuno', value: 0,
+        }]}
+        addOrden={addOrden}
+      />,
     );
     const buttonAddOrden = getByTestId('addOrden-button');
     fireEvent.click(buttonAddOrden);
   });
   it('deberia cambiar el componente orden y mostrar data filtrada por desayuno', () => {
-
     const { getByTestId, queryAllByTestId } = render(
-      <Menu state={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0 }, { id: 2, name: 'Hamburguesa', type: 'Resto del dia', value: 0 }]} />,
+      <Menu state={[{
+        id: 1, name: 'Sandwich', type: 'Desayuno', value: 0,
+      }, {
+        id: 2, name: 'Hamburguesa', type: 'Resto del dia', value: 0,
+      }]}
+      />,
     );
     const buttonFilterDesayuno = getByTestId('filter-button-desayuno');
     fireEvent.click(buttonFilterDesayuno);
-    const result = queryAllByTestId("addOrden-button");
+    const result = queryAllByTestId('addOrden-button');
     expect(result.length).toBe(1);
     expect(getNodeText(result[0])).toBe('Sandwich 0');
   });
   it('deberia cambiar el componente orden y mostrar data filtrada por resto del dia', () => {
-
     const { getByTestId, queryAllByTestId } = render(
-      <Menu state={[{ id: 1, name: 'Sandwich', type: 'Desayuno', value: 0 }, { id: 2, name: 'Hamburguesa', type: 'Resto del día', value: 0 }]} />,
+      <Menu state={[{
+        id: 1, name: 'Sandwich', type: 'Desayuno', value: 0,
+      }, {
+        id: 2, name: 'Hamburguesa', type: 'Resto del día', value: 0,
+      }]}
+      />,
     );
     const buttonFilterRest = getByTestId('filter-button-restodeldia');
     fireEvent.click(buttonFilterRest);
-    const result = queryAllByTestId("addOrden-button");
+    const result = queryAllByTestId('addOrden-button');
     expect(result.length).toBe(1);
     expect(getNodeText(result[0])).toBe('Hamburguesa 0');
   });

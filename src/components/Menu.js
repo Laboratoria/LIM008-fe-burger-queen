@@ -17,7 +17,7 @@ export default function Menu({ addOrden, state }) {
         </div>
       </div>
       <div>
-        {state.filter(compare => (compare.type === filter)).map((item, index) => (
+        {state.filter(compare => (compare.type === filter)).map(item => (
           <button key={item.id} className="margin" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button">
             {`${item.name} ${item.value}`}
           </button>

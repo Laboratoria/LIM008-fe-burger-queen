@@ -12,7 +12,7 @@ function Orden({
       </div>
       <div>
         <p>NOMBRE DE CLIENTE:</p>
-        <input type="text" name="name" value={user.customer} onChange={handleInputChange} data-testid='cliente-input' />
+        <input type="text" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
       </div>
       <table>
         <thead>
@@ -26,7 +26,7 @@ function Orden({
         <tbody>
           {orden.length > 0 ? (
             orden.map((item, index) => (
-              <tr data-testid='item' key={item.id}>
+              <tr data-testid="item" key={item.id}>
                 <td>{item.name}</td>
                 <td>
                   <button
