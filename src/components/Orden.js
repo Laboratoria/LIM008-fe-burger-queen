@@ -66,7 +66,7 @@ function Orden({
             </tr>
           )}
         </tbody>
-        <tfooter>
+        <tfoot>
           <tr>
             <th>TOTAL</th>
             <th>
@@ -75,7 +75,7 @@ function Orden({
               0)}
             </th>
           </tr>
-        </tfooter>
+        </tfoot>
       </table>
       <div>
         <button type="submit">Enviar a cocina</button>
