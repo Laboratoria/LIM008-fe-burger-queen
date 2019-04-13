@@ -25,11 +25,12 @@ describe('Menu', () => {
   });
   it('deberia cambiar el componente orden y mostrar data filtrada por desayuno', () => {
     const { getByTestId, queryAllByTestId } = render(
-      <Menu state={[{
-        id: 1, name: 'Sandwich', type: 'Desayuno', value: 0,
-      }, {
-        id: 2, name: 'Hamburguesa', type: 'Resto del dia', value: 0,
-      }]}
+      <Menu
+        state={[{
+          id: 1, name: 'Sandwich', type: 'Desayuno', value: 0,
+        }, {
+          id: 2, name: 'Hamburguesa', type: 'Resto del dia', value: 0,
+        }]}
       />,
     );
     const buttonFilterDesayuno = getByTestId('filter-button-desayuno');

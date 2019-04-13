@@ -78,7 +78,7 @@ function Orden({
         </tfoot>
       </table>
       <div>
-        <button type="submit">Enviar a cocina</button>
+        <button type="submit" data-testid="ordenToFirebase-button">Enviar a cocina</button>
       </div>
     </form>
   );
