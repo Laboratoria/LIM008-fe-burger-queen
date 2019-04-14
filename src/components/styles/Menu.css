@@ -46,5 +46,16 @@
   font-size: 100%;
   padding: 3%;
   border-radius: 2px
+}
 
+img{
+  width: 60%;
+  background: white
+}
+
+.button-addOrden{
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 2px
 }

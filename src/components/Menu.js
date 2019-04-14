@@ -19,9 +19,9 @@ export default function Menu({ addOrden, state }) {
       </div>
       <div>
         {state.filter(compare => (compare.type === filter)).map(item => (
-          <div className="row">
+          <div className="row container-fluid">
             <div className="col-3">
-              {item.img}
+              <img src={item.img} alt="imagen de opciones"></img>
             </div>
             <div className="col-3">
               <p>{item.name}</p>
@@ -30,7 +30,7 @@ export default function Menu({ addOrden, state }) {
               <p>{item.value}</p>
             </div>
             <div className="col-3">
-              <button key={item.id} type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></button>
+              <button key={item.id} className="button-addOrden" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></button>
             </div>
           </div>
         ))}
