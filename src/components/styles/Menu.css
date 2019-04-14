@@ -1,8 +1,50 @@
 .margin{
     padding: 3%;
-    width: 100%;
-    border-bottom-color: blue;
-    border-bottom-width: 10%;
+    width: 96%;
+    border: none;
+    border-bottom: 3px solid #333333;
     outline: none;
     background-color: white
+}
+
+.marginsup{
+    margin: 3%;
+}
+
+.button-center{
+  text-align: center;
+}
+
+.button-filter{
+    background: white;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    font-size: 130%;
+    margin:0%
+}
+
+.margin-blue{
+  border-right: 3px solid #333333;
+}
+
+.margin-value{
+  margin-left: 20%;
+}
+
+.align-right{
+  text-align: right;
+  margin-right: 0%;
+  padding-right: 0%
+}
+
+.button-count{
+  color: black;
+  background: rgb(255, 217, 3);
+  border: none;
+  font-weight: 900;
+  font-size: 100%;
+  padding: 3%;
+  border-radius: 2px
+
 }

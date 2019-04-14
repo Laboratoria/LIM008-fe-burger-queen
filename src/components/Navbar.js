@@ -6,13 +6,13 @@ export default function Navbar() {
     <div className="Navbar">
       <div className="container-fluid row">
         <div className="col-6">
-          <h1>BURGER QUEEN</h1>
+          <h1 className="title">BURGER QUEEN</h1>
         </div>
-        <div className="col-6 Navbar__brand:hover">
-          <div className="row">
-            <div className="col-4"><a href="#about">ORDENAR PEDIDO</a></div>
-            <div className="col-4"><a href="#about">ATENDER PEDIDO</a></div>
-            <div className="col-4"><a href="#about">PEDIDO LISTO</a></div>
+        <div className="col-6">
+          <div className="row margin-top">
+            <div className="col-4 margin-div a-center"><a href="#about" className="color">ORDENAR PEDIDO</a></div>
+            <div className="col-4 margin-div a-center"><a href="#about" className="color">ATENDER PEDIDO</a></div>
+            <div className="col-4 a-center"><a href="#about" className="color">PEDIDO LISTO</a></div>
           </div>
         </div>
       </div>

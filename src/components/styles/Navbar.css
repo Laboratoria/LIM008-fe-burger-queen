@@ -4,20 +4,35 @@
     background-color: #333333;
     color: #ffffff;
     text-decoration: none;
+    text-decoration-color: #ffffff
   }
-  
-  .Navbar__brand {
+
+  a{
+    font-weight: 500;
+    font-size: 110%;
+  }
+
+  .title{
+    font-weight: 700
+  }
+
+  .margin-top{
+    margin-top: 2%
+  }
+
+  .color{
     color: #ffffff;
-  
-    display: flex;
-    align-items: center;
   }
-  
-  .Navbar__brand:hover {
+
+  .color:hover{
     color: #ffffff;
     text-decoration: none;
   }
-  
-  .Navbar__brand-logo {
-    margin-right: 0.5rem;
+
+  .margin-div{
+    border-right: 4px solid white;
+  }
+
+  .a-center{
+    text-align: center;
   }

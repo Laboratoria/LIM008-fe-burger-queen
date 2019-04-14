@@ -7,19 +7,27 @@ export default function Menu({ addOrden, state }) {
 
 
   return (
-    <div>
-      <div className="row">
+    <div className="margin-blue">
+      <div className="row marginsup button-center">
         <div className="col-6">
-          <button type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
+          <button className="button-filter" type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
         </div>
         <div className="col-6">
-          <button type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
+          <button className="button-filter" type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
         </div>
       </div>
       <div>
         {state.filter(compare => (compare.type === filter)).map(item => (
-          <button key={item.id} className="margin" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button">
-            {`${item.name} ${item.value}`}
+          <button key={item.id} className="margin align-right" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button">
+            <span className="button-center">
+              {item.name}
+            </span>
+            <span className="margin-value">
+              `$/
+              {item.value}
+              .00`
+            </span>
+            {/* {`${item.name} ${item.value}`} */}
           </button>
         ))}
       </div>
