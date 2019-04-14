@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles/Orden.css';
@@ -44,7 +45,7 @@ function Orden({
                       }}
                       data-testid={`${index}-update-button-sum`}
                     >
-                      +
+                      <i className="fas fa-plus"></i>
                     </button>
                     {item.count}
                     <button
@@ -57,7 +58,7 @@ function Orden({
                       }}
                       data-testid={`${index}-update-button-subs`}
                     >
-                      -
+                      <i className="fas fa-minus"></i>
                     </button>
                   </td>
                   <td>{item.value}</td>

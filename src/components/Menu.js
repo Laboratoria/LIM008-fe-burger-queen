@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
 import './styles/Menu.css';
 import PropTypes from 'prop-types';
@@ -18,17 +19,20 @@ export default function Menu({ addOrden, state }) {
       </div>
       <div>
         {state.filter(compare => (compare.type === filter)).map(item => (
-          <button key={item.id} className="margin align-right" type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button">
-            <span className="button-center">
-              {item.name}
-            </span>
-            <span className="margin-value">
-              `$/
-              {item.value}
-              .00`
-            </span>
-            {/* {`${item.name} ${item.value}`} */}
-          </button>
+          <div className="row">
+            <div className="col-3">
+              {item.img}
+            </div>
+            <div className="col-3">
+              <p>{item.name}</p>
+            </div>
+            <div className="col-3">
+              <p>{item.value}</p>
+            </div>
+            <div className="col-3">
+              <button key={item.id} type="button" onClick={() => addOrden(item.name)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
         ))}
       </div>
     </div>
