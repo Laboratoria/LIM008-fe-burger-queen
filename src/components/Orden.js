@@ -55,6 +55,9 @@ function Orden({
                       onClick={() => {
                         const newItem = { ...item };
                         newItem.count -= 1;
+                        if (newItem.count < 1) {
+                          newItem.count = 1;
+                        }
                         updateItem(index, newItem);
                       }}
                       data-testid={`${index}-update-button-subs`}
