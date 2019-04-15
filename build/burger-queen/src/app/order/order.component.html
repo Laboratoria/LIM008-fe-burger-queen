@@ -1,15 +1,17 @@
 <nav class="orange nav">
   <p>Mesa</p>
 </nav>
-
 <section>
   <div>
     <span> Pedido Nro: </span>
     <span>Cliente </span>
   </div>
-  <div>
-    <a class="start" > DESAYUNO </a>
-    <a class="start" > RESTO DEL DÍA </a>
+  <div [ngSwitch] = "schedule">
+    <button (click)= "showMenu()" class="start" *ngSwitchCase = "'Breakfast'"> DESAYUNO </button>
+    <button (click)= "showMenu()" class="start"  *ngSwitchCase = "'Rest'"> RESTO DEL DÍA </button>
+    <app-breakfast *ngIf="false" [name]=schedule></app-breakfast>
   </div>
-  <app-menu> </app-menu>
+  <app-new-order > </app-new-order>
 </section>
+<router-outlet></router-outlet>
+
