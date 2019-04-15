@@ -4,9 +4,9 @@ import './styles/Navbar.css';
 export default function Navbar() {
   return (
     <div className="Navbar">
-      <div className="container-fluid row">
+      <div className="row">
         <div className="col-6">
-          <h1 className="title">BURGER QUEEN</h1>
+          <h1 className="title container-fluid">BURGER QUEEN</h1>
         </div>
         <div className="col-6">
           <div className="row margin-top">

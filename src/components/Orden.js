@@ -8,28 +8,29 @@ function Orden({
 }) {
   return (
     <form onSubmit={addUser} className="margintop">
-      <div className="center orden">
+      <div className="center orden weigth">
         <p>ORDEN</p>
       </div>
       <div className="row">
-        <div className="col-4">
+        <div className="col-4 section">
           <p>Nombre de cliente:</p>
         </div>
-        <div className="col-8">
+        <div className="col-8 section">
           <input type="text" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
         </div>
       </div>
-      <div className="row">
+      <div className="row section">
         <table className="table">
-          <thead>
+          <thead className="table weigth">
             <tr>
               <th>ITEM</th>
               <th>CANTIDAD</th>
               <th>P/UNITARIO</th>
               <th>P/TOTAL</th>
+              <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="table">
             {orden.length > 0 ? (
               orden.map((item, index) => (
                 <tr data-testid="item" key={item.id}>
@@ -74,7 +75,7 @@ function Orden({
               </tr>
             )}
           </tbody>
-          <tfoot>
+          <tfoot className="table weigth">
             <tr>
               <th>TOTAL</th>
               <th>
@@ -82,11 +83,14 @@ function Orden({
                 + (elemento.count * elemento.value),
                 0)}
               </th>
+              <th></th>
+              <th></th>
+              <th></th>
             </tr>
           </tfoot>
         </table>
       </div>
-      <div className="margin-button-send">
+      <div className="margin-button-send weigth">
         <button type="submit" data-testid="ordenToFirebase-button" className="button-send">ENVIAR A COCINAR</button>
       </div>
     </form>

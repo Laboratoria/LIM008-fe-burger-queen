@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 .Navbar {
     width: 100%;
     padding: 0.5rem 0;
     background-color: #333333;
     color: #ffffff;
     text-decoration: none;
-    text-decoration-color: #ffffff
+    text-decoration-color: #ffffff;
+    font-family: 'Alfa Slab One', cursive;
   }
 
-  a{
+  /* a{
     font-weight: 500;
     font-size: 110%;
   }
 
   .title{
     font-weight: 700
-  }
+  } */
 
   .margin-top{
     margin-top: 2%

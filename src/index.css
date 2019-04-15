@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  margin:0px 0px 0px 0px;
+  padding: none;
+  /* font-family: 'Lato', 'Helvetica Neue', sans-serif; */
+  font-family:'Permanent Marker', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-decoration: none
+  text-decoration: none;
+  width: 100%;
 }
 
 a:hover {
   text-decoration: none;
   color: antiquewhite;
+}
+
+.height{
+  height: 100vh;
+  width: 100%;
 }
 

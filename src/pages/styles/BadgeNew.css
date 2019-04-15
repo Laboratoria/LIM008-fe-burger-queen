@@ -1,0 +1,9 @@
+.container2{
+    width:100%;
+    min-height: 100%; 
+    align-content: center;
+}
+
+.margin-black{
+    border-left: 4px solid black; 
+}

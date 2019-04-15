@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Orden from '../components/Orden';
 import Menu from '../components/Menu';
 import firebase from '../firestore';
+import './styles/BadgeNew.css';
 
 const BadgeNew = () => {
   const [state, setState] = useState([]);
@@ -41,12 +42,14 @@ const BadgeNew = () => {
   };
   return (
     <div>
-      <Navbar />
       <div className="row">
-        <div className="col-6">
+        <Navbar />
+      </div>
+      <div className="row">
+        <div className="col-md-6 background-blue">
           <Menu addOrden={addOrden} state={state} />
         </div>
-        <div className="col-6">
+        <div className="col-md-6 background-yellow margin-black">
           <Orden
             orden={orden}
             deleteOrden={deleteOrden}
