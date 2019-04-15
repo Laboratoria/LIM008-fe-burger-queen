@@ -37,7 +37,6 @@ describe('Menu', () => {
     fireEvent.click(buttonFilterDesayuno);
     const result = queryAllByTestId('addOrden-button');
     expect(result).toHaveLength(1);
-    expect(getNodeText(result[0])).toBe('Sandwich 0');
   });
   it('deberia cambiar el componente orden y mostrar data filtrada por resto del dia', () => {
     const { getByTestId, queryAllByTestId } = render(
@@ -52,6 +51,5 @@ describe('Menu', () => {
     fireEvent.click(buttonFilterRest);
     const result = queryAllByTestId('addOrden-button');
     expect(result).toHaveLength(1);
-    expect(getNodeText(result[0])).toBe('Hamburguesa 0');
   });
 });

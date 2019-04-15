@@ -19,7 +19,7 @@ export default function Menu({ addOrden, state }) {
       </div>
       <div className="background-blue div-center">
         {state.filter(compare => (compare.type === filter)).map(item => (
-          <div className="row button-center background-white margin-div margin-top div-centerhijo">
+          <div key={item.id} className="row button-center background-white margin-div margin-top div-centerhijo">
             <div className="col-3">
               <img src={item.img} alt="imagen de opciones"></img>
             </div>
