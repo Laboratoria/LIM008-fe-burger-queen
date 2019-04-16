@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Orden from '../components/Orden';
 import Menu from '../components/Menu';
@@ -9,11 +10,11 @@ const BadgeNew = () => {
   const [state, setState] = useState([]);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json')
-      .then(res => res.json())
-      .then((json) => {
-        setState(json);
-      });
+    async function fetchData() {
+      const result = await axios('https://raw.githubusercontent.com/mahaliroblesarbieto/LIM008-fe-burger-queen/prototype/src/data/menu.json');
+      setState(result.data);
+    }
+    fetchData();
   }, []);
 
   const [orden, setOrden] = useState([]);

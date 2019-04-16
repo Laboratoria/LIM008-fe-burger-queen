@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 body {
-  margin:0px 0px 0px 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: none;
   /* font-family: 'Lato', 'Helvetica Neue', sans-serif; */
   font-family:'Permanent Marker', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
-  width: 100%;
 }
 
 a:hover {
