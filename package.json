@@ -17,9 +17,9 @@
     "workbox-webpack-plugin": "^4.3.0"
   },
   "scripts": {
-    "dev": "react-app-rewired start",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src"

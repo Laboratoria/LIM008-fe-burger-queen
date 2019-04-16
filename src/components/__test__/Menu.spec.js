@@ -6,6 +6,20 @@ import Menu from '../Menu';
 
 afterEach(cleanup);
 
+const originalError = console.error
+beforeAll(() => {
+  console.error = (...args) => {
+    if (/Warning.*not wrapped in act/.test(args[0])) {
+      return
+    }
+    originalError.call(console, ...args)
+  }
+})
+
+afterAll(() => {
+  console.error = originalError
+})
+
 describe('Menu', () => {
   it('addOrden', (done) => {
     const addOrden = (name) => {

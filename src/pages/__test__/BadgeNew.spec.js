@@ -8,6 +8,20 @@ import BadgeNew from '../BadgeNew';
 
 afterEach(cleanup);
 
+const originalError = console.error
+beforeAll(() => {
+  console.error = (...args) => {
+    if (/Warning.*not wrapped in act/.test(args[0])) {
+      return
+    }
+    originalError.call(console, ...args)
+  }
+})
+
+afterAll(() => {
+  console.error = originalError
+})
+
 const fixtureData = {
   __collection__: {
     users: {
@@ -31,12 +45,6 @@ const fixtureData = {
 };
 
 global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true });
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<BadgeNew />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
 // describe('addUser', () => {
 //   it('deberia poder agregar una orden a firebase', (done) => {
@@ -68,7 +76,7 @@ describe('BadgeNew', () => {
     expect(productTableItems).toHaveLength(0);
 
     const addOrdenBtn = await waitForElement(() => getByTestId('addOrden-button'));
-    await act(async () => {
+    act(() => {
       fireEvent.click(addOrdenBtn);
       done();
     });
@@ -78,19 +86,17 @@ describe('BadgeNew', () => {
 
   it('deberia eliminar productos del array de ordenes', async (done) => {
     const { getByTestId, queryAllByTestId } = render(<BadgeNew />);
-    let productTableItems = queryAllByTestId('item');
     const addOrderBtn = await waitForElement(() => getByTestId('addOrden-button'));
-    await act(async () => {
+    act(() => {
       fireEvent.click(addOrderBtn);
       done();
     });
-    productTableItems = queryAllByTestId('item');
     const deleteOrdenBtn = await waitForElement(() => getByTestId('0-deleteOrden-button'));
-    await act(async () => {
+    act(() => {
       fireEvent.click(deleteOrdenBtn);
       done();
     });
-    productTableItems = queryAllByTestId('item');
+    const productTableItems = queryAllByTestId('item');
     expect(productTableItems).toHaveLength(0);
   });
 });
@@ -112,12 +118,12 @@ describe('addUser', () => {
     };
     const { getByTestId } = render(<BadgeNew />);
     const addOrdenBtn = await waitForElement(() => getByTestId('addOrden-button'));
-    await act(async () => {
+    act(() => {
       fireEvent.click(addOrdenBtn);
       done();
     });
     const buttonOrdenToFirebase = await waitForElement(() => getByTestId('ordenToFirebase-button'));
-    await act(async () => {
+    act(() => {
       fireEvent.click(buttonOrdenToFirebase);
       done();
     });
