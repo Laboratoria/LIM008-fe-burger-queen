@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-/* import { DataService } from "../data.service";
- */
+import { DataService } from "../data.service";
+ 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,18 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-  name: string="";
-  number: string= "";
+  name: string;
+  table: number;
+  orderNumber: number;
 
-  constructor() {
+  constructor(private dataService: DataService) {
+    this.dataService.currentMessage.subscribe(nam => {
+      this.name = nam;
+    })
+
+    this.dataService.currentNumber.subscribe(tab => {
+      this.table = tab;
+    })
 
   }
 
   ngOnInit() {
   }
-  lgbtnclick() {
-    console.log(`${this.name} y mesa ${this.number} `);
-  }
+
+  startClick() {
+   const newName = this.name;  
+   this.dataService.changeName(newName);
+
+   const newTable = this.table;  
+   this.dataService.changeTable(newTable);
+}
 }
 
 

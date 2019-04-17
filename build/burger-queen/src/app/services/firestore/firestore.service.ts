@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
   constructor( private firestore: AngularFirestore) { }
   /* Obtener desayuno */
-    public getBreakfast() {
-      return this.firestore.collection('menu', ref => ref.where('horario', '==', 'Desayuno')).snapshotChanges();
+    public getMenu(tipoDeHorario: string) {
+      
+      return this.firestore.collection('menu', ref => ref.where('horario', '==', tipoDeHorario)).snapshotChanges();
     }
   /* Obtener menu del resto del día */
   public getOther() {

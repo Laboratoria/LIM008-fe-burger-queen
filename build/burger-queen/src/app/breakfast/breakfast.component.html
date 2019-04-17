@@ -1,9 +1,9 @@
-
+<p>{{schedule}}</p>
 
 <section class="menu-container" *ngFor="let menu of menus">
-   <div class="menu-content">
-      <p>{{menu.data.nombre}}</p>
-      <p>${{menu.data.precio}}</p>
-      <h1>{{ name }}</h1>
-   </div>
+   <button (click) = "getOrder(menu.data)" class="menu-content">
+      <span>{{menu.data.nombre}}</span> <br>
+      <span>${{menu.data.precio}}</span>
+   </button>
   </section>
+

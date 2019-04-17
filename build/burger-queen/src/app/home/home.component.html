@@ -10,6 +10,7 @@
   <label for="name"></label>
   <input class="input-width input" [(ngModel)]="name" type="text"  name="name" placeholder="Nombre del cliente" autocomplete="off" required>
   <label for="table"></label>
-  <input class="input-width input" [(ngModel)]="number" type="number" name="number" placeholder="Nro de mesa" autocomplete="off" required>
-  <a class="input-width start" (click)="lgbtnclick()" routerLink= "/order"> INICIAR PEDIDO </a>
-</form>
+  <input class="input-width input" [(ngModel)]="table" type="number" name="number" placeholder="Nro de mesa" autocomplete="off" required>
+  <a class="input-width start" (click)="startClick()" routerLink= "/order"> INICIAR PEDIDO </a>
+<p *ngIf="false">{{orderNumber}} </p>
+ </form>
