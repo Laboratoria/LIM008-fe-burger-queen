@@ -15,13 +15,18 @@ export class BreakfastComponent implements OnInit {
     this.dataService.currentOrder.subscribe(ele => {
       this.arrayItems = ele;
     })
+
+    this.dataService.currentDelete.subscribe(ele => {
+      this.arrayItems = ele;
+    })
   }
 
   ngOnInit() {
   }
 
   getOrder(order) {
-    this.dataService.agregarProd(order)
+    console.log(this.arrayItems)
+    this.dataService.agregarProd(order);
   }
   
 }

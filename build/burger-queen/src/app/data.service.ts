@@ -31,6 +31,7 @@ export class DataService {
   currentDelete = this.deleteSource.asObservable();
 
   orderProductos = []
+
   newQty: number = 0;
   subTotalNumber = 0;
 
@@ -71,7 +72,10 @@ export class DataService {
 
   agregarProd(producto) {
     const arrId = this.orderProductos.map(prod =>
-      prod.id)
+      prod.id);
+    const adicional = this.orderProductos.forEach(prod =>
+       console.log(prod.adicional))
+
     if (arrId.includes(producto.id)) {
       producto.quantity += 1;
     } else {
@@ -83,10 +87,9 @@ export class DataService {
 
 
   deleteItem(prod) {
-    const array = this.orderProductos; 
-    const newArray = array.filter(item => item.id != prod.id)
-    console.log(newArray);
-    this.deleteSource.next(newArray);
+    this.orderProductos = this.orderProductos.filter(item => {
+      return item.id != prod.id})
+    this.deleteSource.next(this.orderProductos);
   }
 
 }

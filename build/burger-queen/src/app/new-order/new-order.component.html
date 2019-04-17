@@ -8,9 +8,12 @@
     <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required> 
     <button (click)="decrease(item)"> - </button>
    <span>{{item.nombre}}</span>
+ <!--   <div *ngFor="let additional of item">
+     <span> {{item.adicional}}</span>
+   </div> -->
    <span>Precio Unitario {{item.precio}}$ </span>
    <span> Subtotal: {{getSubTotal(item)}}</span>
-   <button (click)= delete(item) > X 
+   <button (click)= delete(item)> X 
      <img>
    </button>
   </form>

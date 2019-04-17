@@ -10,7 +10,8 @@ export class NewOrderComponent implements OnInit {
   items: any[];
   subTotalComp:number;
   totalComp : number;
-
+  
+  
   constructor(private dataService: DataService) {
     this.dataService.currentOrder.subscribe(ele => {      
       this.items = ele;
@@ -25,7 +26,6 @@ export class NewOrderComponent implements OnInit {
     })
 
     this.dataService.currentDelete.subscribe(ele => { 
-      console.log(ele)     
       this.items = ele;
     })
   }
