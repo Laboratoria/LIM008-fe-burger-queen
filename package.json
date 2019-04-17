@@ -1,6 +1,7 @@
 {
   "name": "burger-queen-tmp",
   "version": "0.1.0",
+  "homepage": "https://mahaliroblesarbieto.github.io/LIM008-fe-burger-queen/",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -19,6 +20,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
@@ -45,6 +48,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "gh-pages": "^2.0.1",
     "mock-cloud-firestore": "^0.9.2",
     "react-testing-library": "^6.1.2"
   }

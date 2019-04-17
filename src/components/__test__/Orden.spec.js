@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable semi */
 import React from 'react';
 import { render, fireEvent, cleanup } from 'react-testing-library';
 import Orden from '../Orden';
@@ -8,14 +10,14 @@ const originalError = console.error
 beforeAll(() => {
   console.error = (...args) => {
     if (/Warning.*not wrapped in act/.test(args[0])) {
-      return
+      return;
     }
-    originalError.call(console, ...args)
-  }
-})
+    originalError.call(console, ...args);
+  };
+});
 
 afterAll(() => {
-  console.error = originalError
+  console.error = originalError;
 });
 
 describe('Orden', () => {
@@ -94,6 +96,33 @@ describe('Orden', () => {
         orden={[
           {
             id: 1, name: 'Sandwich', type: 'Desayuno', value: 0, count: 0, img: '',
+          }]}
+        updateItem={updateItem}
+        user={{ customer: 'customer nuevo' }}
+        deleteOrden={deleteOrden}
+        handleInputChange={handleInputChange}
+        addUser={addUser}
+      />,
+    );
+    const buttonUpdateItemSubs = getByTestId('0-update-button-subs');
+    fireEvent.click(buttonUpdateItemSubs);
+  });
+  it('deberia no poder disminuir menos de 1 la cantidad de cada item', (done) => {
+    const addUser = () => {};
+    const handleInputChange = () => {};
+    const deleteOrden = () => {};
+    const updateItem = (index, item) => {
+      expect(index).toBe(0);
+      expect(item).toEqual({
+        id: 1, name: 'Sandwich', type: 'Desayuno', value: 0, count: 1, img: '',
+      });
+      done();
+    };
+    const { getByTestId } = render(
+      <Orden
+        orden={[
+          {
+            id: 1, name: 'Sandwich', type: 'Desayuno', value: 0, count: 1, img: '',
           }]}
         updateItem={updateItem}
         user={{ customer: 'customer nuevo' }}

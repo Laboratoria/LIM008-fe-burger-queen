@@ -1,26 +1,26 @@
+/* eslint-disable no-console */
 import React from 'react';
 import {
   cleanup, render, fireEvent, waitForElement, act,
 } from 'react-testing-library';
-import ReactDOM from 'react-dom';
 import MockFirebase from 'mock-cloud-firestore';
 import BadgeNew from '../BadgeNew';
 
 afterEach(cleanup);
 
-const originalError = console.error
+const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
     if (/Warning.*not wrapped in act/.test(args[0])) {
-      return
+      return;
     }
-    originalError.call(console, ...args)
-  }
-})
+    originalError.call(console, ...args);
+  };
+});
 
 afterAll(() => {
-  console.error = originalError
-})
+  console.error = originalError;
+});
 
 const fixtureData = {
   __collection__: {
@@ -67,6 +67,9 @@ global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled
 //     });
 //   });
 // });
+const firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true });
+
+global.firebase = firebase;
 
 describe('BadgeNew', () => {
   it('deberia aumentar la cantidad de productos en el array de ordenes', async (done) => {

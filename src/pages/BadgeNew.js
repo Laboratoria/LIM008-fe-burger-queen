@@ -37,7 +37,7 @@ const BadgeNew = () => {
     e.preventDefault();
     const db = firebase.firestore();
     db.settings({ timestampsInSnapshots: true });
-    db.collection('users').add({ name: user.customer, orden });
+    db.collection('users').add({ name: user.customer, orden, date: firebase.firestore.FieldValue.serverTimestamp() });
     setUser({ customer: '' });
     setOrden([]);
   };
