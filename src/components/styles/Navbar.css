@@ -1,24 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 .Navbar {
     width: 100%;
-    padding: 0.5rem 0;
-    background-color: #333333;
-    color: #ffffff;
-    text-decoration: none;
-    text-decoration-color: #ffffff;
     font-family: 'Alfa Slab One', cursive;
   }
 
-  /* a{
-    font-weight: 500;
-    font-size: 110%;
-  }
-
-  .title{
-    font-weight: 700
-  } */
-
-  .margin-top{
+  /* .margin-top{
     margin-top: 2%
   }
 
@@ -29,12 +15,31 @@
   .color:hover{
     color: #ffffff;
     text-decoration: none;
+  } */
+
+  .margin-li{
+    border-right: 2px solid white;
   }
 
-  .margin-div{
-    border-right: 4px solid white;
-  }
-
-  .a-center{
+  /* .a-center{
     text-align: center;
   }
+
+.divmenu{
+  width: 100%;
+  text-align: center
+} */
+
+.margin-left{
+  margin-left: 20%;
+  padding-left: 32%
+}
+
+.title{
+  font-size: 80%
+}
+
+.principal{
+  font-size: 170%;
+  color: white
+}

@@ -42,9 +42,7 @@ const BadgeNew = () => {
   };
   return (
     <div>
-      <div className="row">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="row">
         <div className="col-md-6 background-blue">
           <Menu addOrden={addOrden} state={state} />

@@ -10,11 +10,11 @@ export default function Menu({ addOrden, state }) {
   return (
     <div className="background-blue">
       <div className="row button-center margintop margin-filter-bottom">
-        <div className="col-6 margin-filter">
-          <button className="button-filter weigth marginsup" type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
+        <div className="col-6">
+          <button className="button-filter weigth marginsup list-group-item list-group-item-action tabs" type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
         </div>
         <div className="col-6">
-          <button className="button-filter weigth marginsup" type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
+          <button className="button-filter weigth marginsup list-group-item list-group-item-action tabs" type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
         </div>
       </div>
       <div className="background-blue div-center">

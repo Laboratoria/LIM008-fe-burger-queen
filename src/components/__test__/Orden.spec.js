@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable semi */
 import React from 'react';
 import { render, fireEvent, cleanup } from 'react-testing-library';
 import Orden from '../Orden';

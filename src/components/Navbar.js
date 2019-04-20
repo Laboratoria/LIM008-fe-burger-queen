@@ -1,21 +1,30 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import './styles/Navbar.css';
 
 export default function Navbar() {
   return (
-    <div className="Navbar">
-      <div className="row">
-        <div className="col-6">
-          <h1 className="title container-fluid">BURGER QUEEN</h1>
-        </div>
-        <div className="col-6">
-          <div className="row margin-top">
-            <div className="col-4 margin-div a-center"><a href="#about" className="color">ORDENAR PEDIDO</a></div>
-            <div className="col-4 margin-div a-center"><a href="#about" className="color">ATENDER PEDIDO</a></div>
-            <div className="col-4 a-center"><a href="#about" className="color">PEDIDO LISTO</a></div>
-          </div>
-        </div>
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark Navbar justify-content-between title">
+      <h1 className="principal">BURGER QUEEN</h1>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse navbar-text margin-left" id="navbarNavDropdown">
+        <ul className="navbar-nav">
+          <li className="nav-item margin-li">
+            <a className="nav-link" href="#about">ORDENAR PEDIDO</a>
+          </li>
+          <li className="nav-item margin-li">
+            <a className="nav-link" href="#about">ATENDER PEDIDO</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#about">PEDIDO LISTO</a>
+          </li>
+        </ul>
       </div>
-    </div>
+      {/* <span class="navbar-text">
+      Navbar text with an inline element
+    </span> */}
+    </nav>
   );
 }
