@@ -5,7 +5,7 @@
   "option": "Sandwich",
   "type": "Desayuno",
   "count":1,
-  "img": "public/1.png"
+  "img": "img/1.png"
 },{
   "id": 2,
   "name": "Jugo Natural",
@@ -13,7 +13,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"public/2.png"
+  "img":"img/2.png"
 },{
   "id": 3,
   "name": "Café con leche",
@@ -21,7 +21,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"public/3.png"
+  "img":"img/3.png"
 },{
   "id": 4,
   "name": "Café americano",
@@ -29,7 +29,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"public/4.png"
+  "img":"img/4.png"
 },{
   "id": 5,
   "name": "Hamburguesa simple de res",
@@ -37,7 +37,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"public/5.png"
+  "img":"img/5.png"
 },{
   "id": 6,
   "name": "Hamburguesa simple de pollo",
@@ -45,7 +45,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"public/6.png"
+  "img":"img/6.png"
   },{
   "id": 7,
   "name": "Hamburguesa simple vegetariana",
@@ -53,7 +53,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"public/7.png"
+  "img":"img/7.png"
   },{
   "id": 8,
   "name": "Hamburguesa doble de res",
@@ -61,7 +61,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"public/8.png"
+  "img":"img/8.png"
   },{
   "id": 9,
   "name": "Hamburguesa doble de pollo",
@@ -69,7 +69,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"public/9.png"
+  "img":"img/9.png"
   },{
   "id": 10,
   "name": "Hamburguesa doble vegetariana",
@@ -77,7 +77,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"public/7.png"
+  "img":"img/7.png"
   },{
   "id": 11,
   "name": "Papas fritas",
@@ -85,7 +85,7 @@
   "option": "Acompañamiento",
   "type": "Resto del día",
   "count":1,
-  "img":"public/11.png"
+  "img":"img/11.png"
   },{
   "id": 12,
   "name": "Aros de cebolla",
@@ -93,7 +93,7 @@
   "option": "Acompañamiento",
   "type": "Resto del día",
   "count":1,
-  "img":"public/12.png"
+  "img":"img/12.png"
   },{
   "id": 13,
   "name": "Agua 500 mL",
@@ -101,7 +101,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"public/13.png"
+  "img":"img/13.png"
   },{
   "id": 14,  
   "name": "Agua 750 mL",
@@ -109,7 +109,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"public/14.png"
+  "img":"img/14.png"
   },{
   "id": 15,
   "name": "Gaseosa 500 mL",
@@ -117,7 +117,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"public/15.png"
+  "img":"img/15.png"
   },{
   "id": 16,
   "name": "Gaseosa 750 mL",
@@ -125,7 +125,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"public/16.png"
+  "img":"img/16.png"
   },{
   "id": 17,
   "name": "Queso",
@@ -133,7 +133,7 @@
   "option": "Adicional",
   "type": "Resto del día",
   "count":1,
-  "img":"public/17.png"
+  "img":"img/17.png"
   },{
   "id": 18,
   "name": "Huevo",
@@ -141,6 +141,6 @@
   "option": "Adicional",
   "type": "Resto del día",
   "count":1,
-  "img":"public/18.png"
+  "img":"img/18.png"
     }]
 
