@@ -5,7 +5,7 @@
   "option": "Sandwich",
   "type": "Desayuno",
   "count":1,
-  "img": "https://d701vexhkz032.cloudfront.net/media/images/menu-content/PE/desayunos/tostado-jamon-queso_new_pe.png"
+  "img": "public/1.png"
 },{
   "id": 2,
   "name": "Jugo Natural",
@@ -13,7 +13,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"https://www.pollosmario83.com/288-tm_large_default/jugo-de-naranja-natural.jpg"
+  "img":"public/2.png"
 },{
   "id": 3,
   "name": "Café con leche",
@@ -21,7 +21,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"https://felixlopezcapel.files.wordpress.com/2014/11/cafe-con-leche.jpg?w=1024"
+  "img":"public/3.png"
 },{
   "id": 4,
   "name": "Café americano",
@@ -29,7 +29,7 @@
   "option": "Bebidas",
   "type": "Desayuno",
   "count":1,
-  "img":"https://www.internacionalcafeteria.com/wp-content/uploads/2017/05/03fd6053acd09a05f15f55888018c964-800x675.jpeg"
+  "img":"public/4.png"
 },{
   "id": 5,
   "name": "Hamburguesa simple de res",
@@ -37,7 +37,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"https://www.bembos.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/a/hamburguesa-bembos-cheese.png"
+  "img":"public/5.png"
 },{
   "id": 6,
   "name": "Hamburguesa simple de pollo",
@@ -45,7 +45,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"https://d701vexhkz032.cloudfront.net/media/images/submenu/menu/MX/sandwiches-de-pollo.png"
+  "img":"public/6.png"
   },{
   "id": 7,
   "name": "Hamburguesa simple vegetariana",
@@ -53,7 +53,7 @@
   "option": "Hamburguesa simple",
   "type": "Resto del día",
   "count":1,
-  "img":"https://banner2.kisspng.com/20180331/ayq/kisspng-veggie-burger-vegetarian-cuisine-hamburger-cheese-burger-5abf7d1bde2f29.9520519015224988439101.jpg"
+  "img":"public/7.png"
   },{
   "id": 8,
   "name": "Hamburguesa doble de res",
@@ -61,7 +61,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"https://tunicaragua.com/images/stories/virtuemart/product/Mcnifica%20de%20Res%20Doble.jpg"
+  "img":"public/8.png"
   },{
   "id": 9,
   "name": "Hamburguesa doble de pollo",
@@ -69,7 +69,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"https://ve.all.biz/img/ve/catalog/10441.png"
+  "img":"public/9.png"
   },{
   "id": 10,
   "name": "Hamburguesa doble vegetariana",
@@ -77,7 +77,7 @@
   "option": "Hamburguesa doble",
   "type": "Resto del día",
   "count":1,
-  "img":"https://banner2.kisspng.com/20180331/ayq/kisspng-veggie-burger-vegetarian-cuisine-hamburger-cheese-burger-5abf7d1bde2f29.9520519015224988439101.jpg"
+  "img":"public/7.png"
   },{
   "id": 11,
   "name": "Papas fritas",
@@ -85,7 +85,7 @@
   "option": "Acompañamiento",
   "type": "Resto del día",
   "count":1,
-  "img":"https://okdiario.com/img/recetas/2016/10/30/patatas-fritas5.jpg"
+  "img":"public/11.png"
   },{
   "id": 12,
   "name": "Aros de cebolla",
@@ -93,7 +93,7 @@
   "option": "Acompañamiento",
   "type": "Resto del día",
   "count":1,
-  "img":"https://media.istockphoto.com/photos/pile-of-onion-rings-picture-id955712178?k=6&m=955712178&s=612x612&w=0&h=f3mBS-OWlk9A74xFqalwr3DR871lmT9H_D7P7B9p-yw="
+  "img":"public/12.png"
   },{
   "id": 13,
   "name": "Agua 500 mL",
@@ -101,7 +101,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"https://wongfood.vteximg.com.br/arquivos/ids/157782-512-512/Agua-Sin-Gas-Cielo-Botella-625-ml-113736002.jpg?v=636088742526330000"
+  "img":"public/13.png"
   },{
   "id": 14,  
   "name": "Agua 750 mL",
@@ -109,7 +109,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"https://s7d2.scene7.com/is/image/TottusPE/40351376?$S7Product$&wid=458&hei=458&op_sharpen=0"
+  "img":"public/14.png"
   },{
   "id": 15,
   "name": "Gaseosa 500 mL",
@@ -117,7 +117,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"https://wongfood.vteximg.com.br/arquivos/ids/273848-750-750/103181-1.jpg?v=636850638318230000"
+  "img":"public/15.png"
   },{
   "id": 16,
   "name": "Gaseosa 750 mL",
@@ -125,7 +125,7 @@
   "option": "Bebidas",
   "type": "Resto del día",
   "count":1,
-  "img":"https://wongfood.vteximg.com.br/arquivos/ids/252160-1000-1000/422251-01-4732.jpg?v=636754932237700000"
+  "img":"public/16.png"
   },{
   "id": 17,
   "name": "Queso",
@@ -133,7 +133,7 @@
   "option": "Adicional",
   "type": "Resto del día",
   "count":1,
-  "img":"http://distribucionesmontes.com/68-thickbox_default/queso-roquefort-dop.jpg"
+  "img":"public/17.png"
   },{
   "id": 18,
   "name": "Huevo",
@@ -141,6 +141,6 @@
   "option": "Adicional",
   "type": "Resto del día",
   "count":1,
-  "img":"https://cdn.20m.es/img2/recortes/2016/05/21/286095-600-338.jpg"
+  "img":"public/18.png"
     }]
 
