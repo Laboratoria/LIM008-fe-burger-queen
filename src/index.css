@@ -4,7 +4,6 @@ body {
   height: 100%;
   margin: 0;
   padding: none;
-  /* font-family: 'Lato', 'Helvetica Neue', sans-serif; */
   font-family:'Permanent Marker', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,4 +19,6 @@ a:hover {
   height: 100vh;
   width: 100%;
 }
+
+html{overflow-x: hidden}
 

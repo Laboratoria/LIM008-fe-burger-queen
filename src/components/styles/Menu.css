@@ -49,12 +49,12 @@
 }
 
 img{
-  width: 50px; 
-  height: 50px;
+  width: 80px; 
+  height: auto;
   background: white
 }
 
-.button-addOrden{
+.addOrden{
   background: #2C5BA3;
   color: white;
   border: none;

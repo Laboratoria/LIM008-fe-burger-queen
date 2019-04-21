@@ -6,6 +6,14 @@
     text-align: center;
 }
 
+.label{
+    width: 100%
+  }
+
+.marginbottom{
+    margin-bottom: 3%
+}
+
 .button-send{
     background: rgb(146, 8, 8);
     border: none;

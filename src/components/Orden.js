@@ -11,13 +11,11 @@ function Orden({
       <div className="center orden weigth">
         <p>ORDEN</p>
       </div>
-      <div className="row">
-        <div className="col-4 section">
-          <p>Nombre de cliente:</p>
-        </div>
-        <div className="col-8 section">
-          <input type="text" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
-        </div>
+      <div className="row section form-inline marginbottom">
+        <label htmlFor="name" className="label">
+          Nombre de cliente:
+          <input type="text" id="name" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
+        </label>
       </div>
       <div className="row section">
         <table className="table">
