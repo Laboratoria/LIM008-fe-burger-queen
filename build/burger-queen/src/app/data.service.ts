@@ -38,6 +38,7 @@ export class DataService {
   name: string;
   table: number;
   total: number;
+  orderNumber: number;
 
   newOrder = {
     customerName:'',
@@ -104,16 +105,22 @@ export class DataService {
     this.deleteSource.next(this.orderProductos);
   }
 
-  sendOrdertoFs(){
+  getOrderNumber(ordNumb){
+    this.orderNumber = ordNumb;
+   this.orderNumberSource.next(this.orderNumber)
+  }
+
+  sendOrdertoFs(number){
     const orderToSend = this.newOrder = {
       ...this.newOrder,
       customerName: this.name,
       table: this.table,
-      orderNumber: 1,
+      orderNumber: number,
       total: this.total,
       order: this.orderProductos,
     }
   this.firebaseService.createOrder(orderToSend);
+  this.orderProductos = [];
   }
 
 }

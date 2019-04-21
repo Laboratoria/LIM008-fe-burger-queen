@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {DataService} from '../data.service';
 import { FirestoreService } from '../services/firestore/firestore.service';
 
@@ -12,9 +12,8 @@ export class NewOrderComponent implements OnInit {
   items: any[];
   subTotalComp:number;
   totalComp : number;
-  orders: any[];
+  orderNumber: number;
   
-
   constructor(private dataService: DataService, private firebaseService: FirestoreService) {
     this.dataService.currentOrder.subscribe(ele => {      
       this.items = ele;
@@ -31,6 +30,7 @@ export class NewOrderComponent implements OnInit {
     this.dataService.currentDelete.subscribe(ele => { 
       this.items = ele;
     })
+
   }
   increase(item){
     this.dataService.quantityNumberAdd(item);
@@ -52,24 +52,15 @@ export class NewOrderComponent implements OnInit {
     delete(item){
       this.dataService.deleteItem(item);
       }
-    sendOrder(){
-      this.dataService.sendOrdertoFs();
+    sendOrder(orderNumber){
+      this.dataService.sendOrdertoFs(orderNumber);
+      this.items = [];
       }
 
-    orderNumber(){
-      this.orders = [];
-      this.firebaseService.getOrderNumber().subscribe(ele => {
-      ele.forEach((orderData) => {
-        this.orders.push({
-          id: orderData.payload.doc.id,
-          data: orderData.payload.doc.data()
-        });
-      })
-      console.log(this.orders)
-    });
-    }
-
   ngOnInit() {
+        this.firebaseService.getOrderNumber().subscribe(ele => {
+       const abc = ele.map((orderData) => orderData.payload.doc.data());
+       this.orderNumber = abc.length;
+      })       
   }
-
 }

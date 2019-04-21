@@ -1,13 +1,8 @@
-<p>{{schedule}}</p>
-
 <section class="menu-container" *ngFor="let menu of menus">
    <button (click) = "getOrder(menu.data)" class="menu-content">
       <span>{{menu.data.nombre}}</span> <br>
       <span>${{menu.data.precio}}</span>
-<!--       <span>${{menu.data.acompañamiento}}</span>
- -->
    </button>
-
-   
   </section>
+  <app-new-order></app-new-order>
 

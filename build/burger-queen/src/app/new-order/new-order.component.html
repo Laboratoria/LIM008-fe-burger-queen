@@ -1,8 +1,8 @@
 
-<span> Pedido Nro: {{orderNumber()}}</span>
+<span> Pedido Nro: {{orderNumber +1}} </span>
 <p> Fecha: </p>
 <div>
-  <form *ngFor="let item of items" >
+  <form  *ngFor="let item of items" >
     <button (click)="increase(item)"> + </button>
     <label for="number"></label>
     <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required> 
@@ -16,6 +16,6 @@
   </form>
 
   <span>TOTAL:{{getTotal(items)}} </span>
-  <button (click)= sendOrder() >ENVIAR ORDEN</button>
+  <button (click)= sendOrder(orderNumber+1) >ENVIAR ORDEN</button>
 
 </div>
