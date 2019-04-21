@@ -1,5 +1,5 @@
 
-<span> Pedido Nro: {{orderNumber}}</span>
+<span> Pedido Nro: {{orderNumber()}}</span>
 <p> Fecha: </p>
 <div>
   <form *ngFor="let item of items" >
@@ -8,9 +8,6 @@
     <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required> 
     <button (click)="decrease(item)"> - </button>
    <span>{{item.nombre}}</span>
- <!--   <div *ngFor="let additional of item">
-     <span> {{item.adicional}}</span>
-   </div> -->
    <span>Precio Unitario {{item.precio}}$ </span>
    <span> Subtotal: {{getSubTotal(item)}}</span>
    <button (click)= delete(item)> X 
@@ -19,5 +16,6 @@
   </form>
 
   <span>TOTAL:{{getTotal(items)}} </span>
-  
+  <button (click)= sendOrder() >ENVIAR ORDEN</button>
+
 </div>

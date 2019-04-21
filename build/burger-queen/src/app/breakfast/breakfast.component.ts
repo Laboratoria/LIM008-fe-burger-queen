@@ -25,7 +25,6 @@ export class BreakfastComponent implements OnInit {
   }
 
   getOrder(order) {
-    console.log(this.arrayItems)
     this.dataService.agregarProd(order);
   }
   

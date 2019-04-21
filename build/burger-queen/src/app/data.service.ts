@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { FirestoreService } from './services/firestore/firestore.service';
 
 @Injectable({
   providedIn: 'root'
@@ -34,15 +35,29 @@ export class DataService {
 
   newQty: number = 0;
   subTotalNumber = 0;
+  name: string;
+  table: number;
+  total: number;
 
-  constructor() { }
+  newOrder = {
+    customerName:'',
+    table:0,
+    orderNumber: 0,
+    total: 0,
+    order: [],
+  }
+
+  constructor(private firebaseService: FirestoreService) {  
+  }
 
   changeName(name: string) {
-    this.nameSource.next(name)
+    this.name = name;
+    this.nameSource.next(this.name)
   }
 
   changeTable(table: number) {
-    this.tableSource.next(table)
+    this.table = table;
+    this.tableSource.next(this.table)
   }
 
   quantityNumberAdd(item){
@@ -66,15 +81,13 @@ export class DataService {
    }
 
    obtainTotal(prods) {
-    const total = prods.reduce((a,b) =>  {return a + b.subTotal}, 0);
-    this.totalSource.next(total);
+    this.total = prods.reduce((a ,b) => a + b.subTotal, 0);
+    this.totalSource.next(this.total);
    }
 
   agregarProd(producto) {
     const arrId = this.orderProductos.map(prod =>
       prod.id);
-    const adicional = this.orderProductos.forEach(prod =>
-       console.log(prod.adicional))
 
     if (arrId.includes(producto.id)) {
       producto.quantity += 1;
@@ -87,9 +100,20 @@ export class DataService {
 
 
   deleteItem(prod) {
-    this.orderProductos = this.orderProductos.filter(item => {
-      return item.id != prod.id})
+    this.orderProductos = this.orderProductos.filter(item => item.id != prod.id);
     this.deleteSource.next(this.orderProductos);
+  }
+
+  sendOrdertoFs(){
+    const orderToSend = this.newOrder = {
+      ...this.newOrder,
+      customerName: this.name,
+      table: this.table,
+      orderNumber: 1,
+      total: this.total,
+      order: this.orderProductos,
+    }
+  this.firebaseService.createOrder(orderToSend);
   }
 
 }

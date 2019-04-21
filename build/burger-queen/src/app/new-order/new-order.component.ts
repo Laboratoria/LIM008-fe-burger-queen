@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {DataService} from '../data.service';
+import { FirestoreService } from '../services/firestore/firestore.service';
 
 @Component({
   selector: 'app-new-order',
@@ -7,12 +8,14 @@ import {DataService} from '../data.service';
   styleUrls: ['./new-order.component.css'],
 })
 export class NewOrderComponent implements OnInit {
+  show: boolean = false;
   items: any[];
   subTotalComp:number;
   totalComp : number;
+  orders: any[];
   
-  
-  constructor(private dataService: DataService) {
+
+  constructor(private dataService: DataService, private firebaseService: FirestoreService) {
     this.dataService.currentOrder.subscribe(ele => {      
       this.items = ele;
     })
@@ -49,6 +52,22 @@ export class NewOrderComponent implements OnInit {
     delete(item){
       this.dataService.deleteItem(item);
       }
+    sendOrder(){
+      this.dataService.sendOrdertoFs();
+      }
+
+    orderNumber(){
+      this.orders = [];
+      this.firebaseService.getOrderNumber().subscribe(ele => {
+      ele.forEach((orderData) => {
+        this.orders.push({
+          id: orderData.payload.doc.id,
+          data: orderData.payload.doc.data()
+        });
+      })
+      console.log(this.orders)
+    });
+    }
 
   ngOnInit() {
   }
