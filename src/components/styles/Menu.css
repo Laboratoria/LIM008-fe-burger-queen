@@ -3,16 +3,20 @@
   font-family: 'Mako', sans-serif;
 }
 
+@font-face{
+  font-display: swap;
+  font-family: 'Mako', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
+}
+
+@font-face{
+  font-display: swap;
+  font-family: 'Alfa Slab One', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
+}
+
 .weigth{
   font-family: 'Alfa Slab One', cursive;
-}
-.margin{
-    padding: 3%;
-    width: 96%;
-    border: none;
-    border-bottom: 3px solid #333333;
-    outline: none;
-    background-color: white
 }
 
 .marginsup{
@@ -31,26 +35,9 @@
     margin:0%
 }
 
-
-.align-right{
-  text-align: right;
-  margin-right: 0%;
-  padding-right: 0%
-}
-
-.button-count{
-  color: black;
-  background: rgb(255, 167, 3);
-  border: none;
-  font-weight: 900;
-  font-size: 100%;
-  padding: 3%;
-  border-radius: 80px
-}
-
 img{
-  /* width: 80px; 
-  height: auto; */
+  width: 50%; 
+  height: auto;
   background: white
 }
 
@@ -71,24 +58,20 @@ img{
   border-bottom: 2px solid #2C5BA3
 }
 
-.centrar1{
+.centrar{
   display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
 }
 
-.background-blue{
+.background-menu{
   background: #ffffff
 }
 
 .margin-div{
   margin-bottom: 5%;
   width: 100%
-}
-
-.margin-filter{
-  border-right: 4px solid black;
 }
 
 .margin-filter-bottom{
@@ -98,7 +81,7 @@ img{
 .div-center{
   text-align: center;
   margin-top: 3%;
-  margin-left: 40px
+  margin-left: 7%
 }
 
 .div-centerhijo {

@@ -1,9 +1,9 @@
-.container2{
-    width:100%;
-    min-height: 100%; 
-    align-content: center;
-}
+.background-principal{
+    background: #ffffff
+  }
 
-.margin-black{
+@media only screen and (min-width: 600px) {
+  .margin-black{
     border-left: 4px solid black; 
+  }
 }

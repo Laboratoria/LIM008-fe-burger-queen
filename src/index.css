@@ -10,15 +10,17 @@ body {
   text-decoration: none;
 }
 
+@font-face{
+  font-display: swap;
+  font-family:'Permanent Marker', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
+}
+
 a:hover {
   text-decoration: none;
   color: antiquewhite;
 }
 
-.height{
-  height: 100vh;
-  width: 100%;
-}
-
 html{overflow-x: hidden}
+
 

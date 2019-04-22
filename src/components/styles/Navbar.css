@@ -4,31 +4,9 @@
     font-family: 'Alfa Slab One', cursive;
   }
 
-  /* .margin-top{
-    margin-top: 2%
-  }
-
-  .color{
-    color: #ffffff;
-  }
-
-  .color:hover{
-    color: #ffffff;
-    text-decoration: none;
-  } */
-
-  .margin-li{
+.margin-li{
     border-right: 2px solid white;
   }
-
-  /* .a-center{
-    text-align: center;
-  }
-
-.divmenu{
-  width: 100%;
-  text-align: center
-} */
 
 .margin-left{
   margin-left: 20%;

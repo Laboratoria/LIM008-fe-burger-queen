@@ -42,12 +42,14 @@ const BadgeNew = () => {
   };
   return (
     <div>
-      <Navbar />
       <div className="row">
-        <div className="col-md-6 background-blue">
+        <Navbar />
+      </div>
+      <div className="row">
+        <div className="col-md-6 background-principal">
           <Menu addOrden={addOrden} state={state} />
         </div>
-        <div className="col-md-6 background-yellow margin-black">
+        <div className="col-md-6 background-principal margin-black">
           <Orden
             orden={orden}
             deleteOrden={deleteOrden}
