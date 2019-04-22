@@ -68,11 +68,11 @@ input{
 }
 
 .font-mayor{
-    font-size: 85%
+    font-size: 80%
 }
 
 .font-menor{
-    font-size: 85%
+    font-size: 80%
 }
 
 @media only screen and (min-width: 769px) {

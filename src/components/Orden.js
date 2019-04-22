@@ -69,8 +69,10 @@ function Orden({
               </div>
             ))
           ) : (
-            <div className="row">
-              <p>No hay pedidos</p>
+            <div className="row center margin-option">
+              <div className="col-12 center">
+                No hay pedidos
+              </div>
             </div>
           )}
           <div className="row weigth margin-total font-mayor">
