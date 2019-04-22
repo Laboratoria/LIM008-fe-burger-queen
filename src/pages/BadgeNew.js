@@ -41,11 +41,11 @@ const BadgeNew = () => {
     setOrden([]);
   };
   return (
-    <div>
-      <div className="row">
+    <div className="width-total">
+      <div className="row width-total">
         <Navbar />
       </div>
-      <div className="row">
+      <div className="row width-total">
         <div className="col-md-6 background-principal">
           <Menu addOrden={addOrden} state={state} />
         </div>

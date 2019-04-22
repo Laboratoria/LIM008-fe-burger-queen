@@ -2,8 +2,12 @@
     background: #ffffff
   }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 766px) {
   .margin-black{
     border-left: 4px solid black; 
   }
+}
+
+.width-total{
+  width:102%
 }

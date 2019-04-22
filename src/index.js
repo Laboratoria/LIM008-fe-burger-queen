@@ -6,6 +6,6 @@ import BadgeNew from './pages/BadgeNew';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const container = document.getElementById('root');
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<BadgeNew className="width-total" />, container);
 
 serviceWorker.register();

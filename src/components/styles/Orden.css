@@ -20,10 +20,6 @@
     width: 100%
   }
 
-.marginbottom{
-    margin-bottom: 3%
-}
-
 .button-send{
     background: rgb(146, 8, 8);
     border: none;
@@ -38,28 +34,12 @@
     margin-right: 5%
 }
 
-.orden{
-    color:black;
-    font-size: 100%
-}
-
-.table{
-    text-align: center;
-    border: none;  
-}
-
 .margin-button-count-sum{
     margin-right: 10%
 }
 
 .margin-button-count-substr{
     margin-left: 10%
-}
-
-.button-count{
-    padding: 2%;
-    width:20%;
-    font-weight: bolder;
 }
 
 .button-delete{
@@ -69,7 +49,40 @@
 }
 
 input{
-    border: 2px solid #333333;
-    border-radius: 2px;
-    width: 60%;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    width: 40%;
   }
+
+.margin-option{
+    margin-top: 3%;
+    margin-bottom: 3%
+}
+
+.margin-orden{
+    padding-left: 45%
+}
+
+.margin-total{
+    padding-left: 9%
+}
+
+.font-mayor{
+    font-size: 85%
+}
+
+.font-menor{
+    font-size: 85%
+}
+
+@media only screen and (min-width: 769px) {
+    .font-mayor{
+        font-size: 100%
+    }
+
+    .font-menor{
+        font-size: 100%
+    }
+  }
+
+
