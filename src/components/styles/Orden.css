@@ -4,21 +4,15 @@
 
 .button-count{
     color: black;
-    background: rgb(255, 167, 3);
+    background: #ffc107;
     border: none;
-    font-weight: 900;
     font-size: 100%;
-    padding: 3%;
-    border-radius: 80px
+    border-radius: 50%
   }
 
 .center{
     text-align: center;
 }
-
-.label{
-    width: 100%
-  }
 
 .button-send{
     background: rgb(146, 8, 8);
@@ -28,30 +22,26 @@
     padding: 2%
 }
 
-.margin-button-send{
-    margin-top: 10%;
-    text-align: right;
-    margin-right: 5%
-}
-
 .margin-button-count-sum{
-    margin-right: 10%
+    margin-right: 4%
 }
 
 .margin-button-count-substr{
-    margin-left: 10%
+    margin-left: 4%
 }
 
 .button-delete{
     color: white;
     background: #CF2728;
-    border: none
+    border: none;
+    border-radius: 50%
 }
 
 input{
-    border: 1px solid #333333;
-    border-radius: 4px;
-    width: 40%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #333333;
+    width: 30%;
   }
 
 .margin-option{
@@ -68,11 +58,19 @@ input{
 }
 
 .font-mayor{
-    font-size: 80%
+    font-size: 65%
 }
 
 .font-menor{
     font-size: 80%
+}
+
+.margin-send{
+    margin-left: 52%
+}
+
+.margin-cliente{
+    margin-top: 10%
 }
 
 @media only screen and (min-width: 769px) {
@@ -83,6 +81,24 @@ input{
     .font-menor{
         font-size: 100%
     }
+    .margin-send{
+        margin-left: 10%
+    }
+    .margin-button-count-sum{
+        margin-right: 15%
+    }
+    
+    .margin-button-count-substr{
+        margin-left: 15%
+    }
+    input{
+        background: none;
+        border: none;
+        border-bottom: 2px solid #333333;
+        width: 60%;
+      }
   }
+
+  
 
 

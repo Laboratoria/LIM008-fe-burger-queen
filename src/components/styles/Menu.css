@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
 .section{
   font-family: 'Mako', sans-serif;
+  font-weight: bolder
 }
 
 @font-face{
@@ -13,6 +14,10 @@
   font-display: swap;
   font-family: 'Alfa Slab One', cursive;
   src: url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
+}
+
+.red{
+  background: rgb(146, 8, 8);
 }
 
 .weigth{
@@ -38,24 +43,24 @@
 img{
   width: 50%; 
   height: auto;
-  background: white
+  background: white;
 }
 
 .addOrden{
   background: #2C5BA3;
   color: white;
   border: none;
-  border-radius: 2px
+  border-radius: 2px;
+  width: 55%;
 }
 
 .width{
   width: 100%
 }
 
-.background-white{
-  background: white;
+.border-black{
   border-radius: 2px;
-  border-bottom: 2px solid #2C5BA3
+  border-bottom: 3px solid rgb(1, 1, 2)
 }
 
 .centrar{
@@ -63,10 +68,6 @@ img{
     justify-content: center;
     align-content: center;
     flex-direction: column;
-}
-
-.background-menu{
-  background: #ffffff
 }
 
 .margin-div{
@@ -91,4 +92,12 @@ img{
 .padding-option{
   padding-top: 3%;
   padding-bottom: 3%
+}
+
+.margin-addOrden{
+  padding-left: 10%
+}
+
+.margin-rigth{
+  margin-right:3px solid rgb(1, 1, 2) 
 }

@@ -2,22 +2,22 @@
 import React, { useState } from 'react';
 import './styles/Menu.css';
 import PropTypes from 'prop-types';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
 
 export default function Menu({ addOrden, state }) {
   const [filter, setFilter] = useState('Desayuno');
   return (
-    <div className="background-menu">
-      <div className="row button-center margin-filter-bottom">
-        <div className="col-6">
-          <button className="button-filter weigth marginsup list-group-item list-group-item-action" type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</button>
-        </div>
-        <div className="col-6">
-          <button className="button-filter weigth marginsup list-group-item list-group-item-action" type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</button>
-        </div>
+    <div className="width">
+      <div className="d-flex flex-column border-black">
+        <ButtonGroup size="mt-3">
+          <Button className="button-filter weigth marginsup btn marginrigth" variant="outline-dark" type="button" onClick={() => setFilter('Desayuno')} data-testid="filter-button-desayuno">DESAYUNO</Button>
+          <Button className="button-filter weigth marginsup btn" variant="outline-dark" type="button" onClick={() => setFilter('Resto del día')} data-testid="filter-button-restodeldia">MENÚ</Button>
+        </ButtonGroup>
       </div>
-      <div className="background-blue div-center">
+      <div className="div-center">
         {state.filter(compare => (compare.type === filter)).map(item => (
-          <div key={item.id} className="row button-center background-white margin-div div-centerhijo padding-option">
+          <div key={item.id} className="row button-center border-black margin-div div-centerhijo padding-option">
             <div className="col-3">
               <img src={item.img} alt="imagen de opciones"></img>
             </div>
@@ -31,7 +31,7 @@ export default function Menu({ addOrden, state }) {
                 .00
               </p>
             </div>
-            <div className="col-3 width section centrar">
+            <div className="col-3 width section centrar margin-addOrden">
               <span key={item.id} className="addOrden" role="presentation" onClick={() => addOrden(item)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></span>
             </div>
           </div>
