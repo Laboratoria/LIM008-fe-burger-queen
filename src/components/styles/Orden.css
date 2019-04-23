@@ -19,15 +19,15 @@
     border: none;
     color: white;
     border-radius: 4px;
-    padding: 2%
+    padding: 3%
 }
 
 .margin-button-count-sum{
-    margin-right: 4%
+    margin-right: 2%
 }
 
 .margin-button-count-substr{
-    margin-left: 4%
+    margin-left: 2%
 }
 
 .button-delete{
@@ -58,15 +58,19 @@ input{
 }
 
 .font-mayor{
-    font-size: 65%
+    font-size: 60%
+}
+
+.marginleft{
+    padding-left: 2%
+}
+
+.ordenmayor{
+    font-size: 130%
 }
 
 .font-menor{
-    font-size: 80%
-}
-
-.margin-send{
-    margin-left: 52%
+    font-size: 75%
 }
 
 .margin-cliente{

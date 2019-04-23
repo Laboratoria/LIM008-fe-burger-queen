@@ -9,15 +9,15 @@ function Orden({
   return (
     <div>
       <form onSubmit={addUser} className="margintop">
-        <div className="center weigth row margin-orden">
+        <div className="center weigth row margin-orden ordenmayor">
           ORDEN
         </div>
         <div className="container center margin-option">
           <div className="row weigth font-mayor">
-            <div className="col-3">DESCRIPCIÓN</div>
+            <div className="col-3">PRODUCTO</div>
             <div className="col-3">CANTIDAD</div>
-            <div className="col-3">P/UNITARIO</div>
-            <div className="col-3">P/TOTAL</div>
+            <div className="col-3">PRECIO</div>
+            <div className="col-3">ELIMINAR</div>
           </div>
           {orden.length > 0 ? (
             orden.map((item, index) => (
@@ -55,13 +55,10 @@ function Orden({
                 </div>
                 <div className="col-3 center">
                   $/
-                  {item.value}
+                  {item.count * item.value}
                   .00
                 </div>
                 <div className="col-3 center">
-                  $/
-                  {item.count * item.value}
-                  .00
                   <button type="button" className="button muted-button button-delete margin-button-count-substr" onClick={() => deleteOrden(item.name)} data-testid={`${index}-deleteOrden-button`}><i className="fas fa-trash-alt" /></button>
                 </div>
               </div>
@@ -74,7 +71,7 @@ function Orden({
             </div>
           )}
           <div className="row weigth margin-total font-mayor margin-option">
-            <div className="col-3 center">
+            <div className="col-3">
               TOTAL:
             </div>
             <div className="col-9 center">
@@ -86,13 +83,17 @@ function Orden({
             </div>
           </div>
           <div className="section form-inline margin-cliente">
-            <div className="row">
-              <label htmlFor="name">
-                Cliente:
-                <input type="text" id="name" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
-              </label>
+            <div className="row marginleft">
+              <div className="col-6">
+                <label htmlFor="name">
+                  Cliente:
+                  <input type="text" id="name" name="name" value={user.customer} onChange={handleInputChange} data-testid="cliente-input" />
+                </label>
+              </div>
+              <div className="col-6">
+                <button type="submit" data-testid="ordenToFirebase-button" className="button-send">ENVIAR A COCINAR</button>
+              </div>
             </div>
-            <button type="submit" data-testid="ordenToFirebase-button" className="button-send margin-send">ENVIAR A COCINAR</button>
           </div>
         </div>
       </form>
