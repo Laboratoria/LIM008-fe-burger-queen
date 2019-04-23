@@ -1,21 +1,46 @@
+<tr>
+  <th scope="col">Pedido Nro: {{orderNumber +1}}</th>
+</tr>
+<tr>
+  <th scope="col">Fecha:</th>
+</tr>
+<table class="table">
 
-<span> Pedido Nro: {{orderNumber +1}} </span>
-<p> Fecha: </p>
-<div>
-  <form  *ngFor="let item of items" >
-    <button (click)="increase(item)"> + </button>
-    <label for="number"></label>
-    <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required> 
-    <button (click)="decrease(item)"> - </button>
-   <span>{{item.nombre}}</span>
-   <span>Precio Unitario {{item.precio}}$ </span>
-   <span> Subtotal: {{getSubTotal(item)}}</span>
-   <button (click)= delete(item)> X 
-     <img>
-   </button>
-  </form>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Unid</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio Unit.</th>
+      <th scope="col">Subtotal</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
 
-  <span>TOTAL:{{getTotal(items)}} </span>
-  <button (click)= sendOrder(orderNumber+1) >ENVIAR ORDEN</button>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <th scope="row">
+        <button (click)="increase(item)"> + </button>
+        <label for="number"></label>
+        <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required>
+        <button (click)="decrease(item)"> - </button>
+      </th>
+      <td> <span>{{item.nombre}}</span>
+      </td>
+      <td> <span>{{item.precio}}$ </span>
+      </td>
+      <td><span> ${{getSubTotal(item)}}</span>
+      </td>
+      <td> <button (click)=delete(item)> X
+          <img>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"> <span>TOTAL:${{getTotal(items)}} </span>
+      </th>
+    </tr>
 
-</div>
+    <tr> <button (click)=sendOrder(orderNumber+1)>ENVIAR ORDEN</button>
+    </tr>
+  </tbody>
+</table>

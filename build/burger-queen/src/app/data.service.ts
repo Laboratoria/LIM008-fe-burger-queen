@@ -119,6 +119,7 @@ export class DataService {
       total: this.total,
       order: this.orderProductos,
     }
+    
   this.firebaseService.createOrder(orderToSend);
   this.orderProductos = [];
   }

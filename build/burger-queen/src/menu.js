@@ -1,8 +1,0 @@
-const menu = {
-    breakfast: {
-
-    },
-    lunch = {
-
-    },
-}
