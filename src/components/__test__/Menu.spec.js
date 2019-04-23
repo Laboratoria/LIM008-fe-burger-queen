@@ -8,8 +8,8 @@ afterEach(cleanup);
 
 describe('Menu', () => {
   it('addOrden', (done) => {
-    const addOrden = (name) => {
-      expect(name).toBe('Sandwich');
+    const addOrden = (array) => {
+      expect(array.name).toBe('Sandwich');
       done();
     };
     const { getByTestId } = render(

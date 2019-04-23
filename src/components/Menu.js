@@ -32,7 +32,7 @@ export default function Menu({ addOrden, state }) {
               </p>
             </div>
             <div className="col-3 width section centrar">
-              <span key={item.id} className="addOrden" role="presentation" onClick={() => addOrden(item.name)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></span>
+              <span key={item.id} className="addOrden" role="presentation" onClick={() => addOrden(item)} data-testid="addOrden-button"><i className="fas fa-shopping-cart"></i></span>
             </div>
           </div>
         ))}

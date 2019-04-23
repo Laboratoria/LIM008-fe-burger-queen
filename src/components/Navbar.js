@@ -12,12 +12,12 @@ export default function Navbar() {
       <div className="collapse navbar-collapse navbar-text margin-left" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item margin-li">
-            <a className="nav-link" href="#about">ORDENAR PEDIDO</a>
+            <a className="nav-link option" href="#about">ORDENAR PEDIDO</a>
           </li>
-          <li className="nav-item margin-li">
+          <li className="nav-item margin-li option">
             <a className="nav-link" href="#about">ATENDER PEDIDO</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item option">
             <a className="nav-link" href="#about">PEDIDO LISTO</a>
           </li>
         </ul>

@@ -58,7 +58,7 @@ describe('BadgeNew', () => {
     productTableItems = queryAllByTestId('item');
     expect(productTableItems).toHaveLength(0);
   });
-  it('debería guardar la orden en firebase', async () => {
+  it('debería guardar la orden en firebase', async (done) => {
     const getCollectionFromFirebase = (callback) => {
       const db = firebase.firestore();
       db.collection('users').onSnapshot((querySnapshot) => {
@@ -84,6 +84,7 @@ describe('BadgeNew', () => {
 
     const getData = (data) => {
       expect(data).toHaveLength(1);
+      done();
     };
     getCollectionFromFirebase(getData);
   });
