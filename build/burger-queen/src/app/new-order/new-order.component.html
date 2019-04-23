@@ -1,3 +1,4 @@
+<section class="float-right">
 <tr>
   <th scope="col">Pedido Nro: {{orderNumber +1}}</th>
 </tr>
@@ -5,7 +6,6 @@
   <th scope="col">Fecha:</th>
 </tr>
 <table class="table">
-
   <thead class="thead-dark">
     <tr>
       <th scope="col">Unid</th>
@@ -15,7 +15,6 @@
       <th scope="col">Eliminar</th>
     </tr>
   </thead>
-
   <tbody>
     <tr *ngFor="let item of items">
       <th scope="row">
@@ -39,8 +38,8 @@
       <th scope="row"> <span>TOTAL:${{getTotal(items)}} </span>
       </th>
     </tr>
-
     <tr> <button (click)=sendOrder(orderNumber+1)>ENVIAR ORDEN</button>
     </tr>
   </tbody>
 </table>
+</section>
