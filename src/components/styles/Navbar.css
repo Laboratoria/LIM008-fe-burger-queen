@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
-.Navbar {
+.NavbarClass {
     width: 100%;
     font-family: 'Alfa Slab One', cursive;
   }
@@ -28,4 +28,13 @@
 
 .option{
   color:white
+}
+
+@media only screen and (min-width: 769px) {
+  .nav-center{
+    text-align: center;
+  }
+  .margin-left-nav{
+    margin-left: 60%
+  }
 }
