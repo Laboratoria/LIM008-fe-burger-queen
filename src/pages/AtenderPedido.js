@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import firebase from 'firebase';
@@ -6,6 +7,12 @@ export default function AtenderPedido() {
   const { error, loading, value } = useCollection(
     firebase.firestore().collection('users'),
   );
+
+  const sendFinishedOrden = (item, id) => {
+    const db = firebase.firestore();
+    db.collection('ordenFinished').add(item);
+    db.collection('users').doc(id).delete();
+  };
   return (
     <div className="container center margin-option">
       <div className="row weigth font-mayor">
@@ -25,7 +32,7 @@ export default function AtenderPedido() {
               <div className="col-3 center">{doc.data().orden.map(item => (<div>{item.name}</div>))}</div>
               <div className="col-3 center">{doc.data().orden.map(item => (<div>{item.count}</div>))}</div>
               <div className="col-3 center">
-                <button type="button" className="button muted-button button-delete margin-button-count-substr"><i className='fas fa-share'></i></button>
+                <button type="button" className="button muted-button button-delete margin-button-count-substr" onClick={() => sendFinishedOrden(doc.data(), doc.id)}><i className="fas fa-share"></i></button>
               </div>
             </div>
             // <React.Fragment key={doc.id}>
