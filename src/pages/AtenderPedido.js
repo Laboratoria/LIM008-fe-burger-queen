@@ -5,7 +5,7 @@ import firebase from 'firebase';
 
 export default function AtenderPedido() {
   const { error, loading, value } = useCollection(
-    firebase.firestore().collection('users'),
+    firebase.firestore().collection('users').orderBy('date', 'asc'),
   );
 
   const sendFinishedOrden = (item, id) => {
