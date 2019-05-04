@@ -9,7 +9,7 @@ import PedidoListo from '../pages/PedidoListo';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Layout>
         <Switch>
           <Route exact path="/" component={OrdenarPedido} />
