@@ -1,15 +1,14 @@
-<nav class="orange nav">
-  <p>Mesa {{table}} </p>
-</nav>
-<section>
+  <base href="/">
+  <nav class="orange nav sup">
+    <p>Mesa {{table}} </p>
+  </nav>
   <div>
     <span>Cliente: {{name}}</span>
   </div>
-  <div >
-    <button (click)= "showMenu('Desayuno')" class="start" > DESAYUNO </button>
-    <button (click)= "showMenu('Resto del día')" class="start" > RESTO DEL DÍA </button>
-    <app-breakfast [menus]= "menu"></app-breakfast>
-  </div>
-</section>
-
-<footer class="orange nav"> Atrás </footer>
+  <section class="d-flex">
+    <app-breakfast class="w-50 bg-danger"></app-breakfast>
+    <app-new-order class="w-50 bg-warning"></app-new-order>
+  </section>
+  <footer class="orange nav inf">
+    <p>Atrás</p>
+  </footer>

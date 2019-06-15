@@ -1,21 +1,21 @@
-.start{
-    background: #F4C903;
-    border-radius: 14px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: normal;
-    color: #F7F7F7;
-}
 
-.nav{
+
+.orange {
     background-color: #FF4500;
+
+}
+.nav{
+    bottom: 0;
+    width: 100%;
+}
+.sup{
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    height: 10%;
-    width: 100%;
     margin-bottom: 10px;
+    height: 10%;
+}
+.inf{
+    position: absolute;
 }

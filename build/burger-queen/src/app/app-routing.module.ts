@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import { OrderComponent } from './order/order.component';
-import { BreakfastComponent } from './breakfast/breakfast.component';
-import { NewOrderComponent } from './new-order/new-order.component';
+import { BreakfastComponent } from './order/breakfast/breakfast.component';
+import { NewOrderComponent } from './order/new-order/new-order.component';
 
 
 const routes: Routes = [

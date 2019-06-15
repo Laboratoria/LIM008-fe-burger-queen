@@ -31,6 +31,7 @@ export class DataService {
   private deleteSource = new BehaviorSubject([]);
   currentDelete = this.deleteSource.asObservable();
 
+
   orderProductos = []
 
   newQty: number = 0;
@@ -50,6 +51,7 @@ export class DataService {
 
   constructor(private firebaseService: FirestoreService) {  
   }
+
 
   changeName(name: string) {
     this.name = name;
@@ -89,9 +91,9 @@ export class DataService {
   agregarProd(producto) {
     const arrId = this.orderProductos.map(prod =>
       prod.id);
-
     if (arrId.includes(producto.id)) {
-      producto.quantity += 1;
+      const elemento = this.orderProductos.find(p => producto.id === p.id)
+      elemento.quantity += 1; 
     } else {
       this.orderProductos.push(producto);
       producto.quantity += 1;

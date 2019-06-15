@@ -1,0 +1,13 @@
+<section class="menu-container d-flex align-content-stretch flex-wrap" role="group" aria-label="Basic example">
+  <div class="d-flex">
+    <button (click)="showMenu('Desayuno')" class="btn start w-50"> DESAYUNO </button>
+    <button (click)="showMenu('Resto del día')" class="btn start w-50"> RESTO DEL DÍA </button>
+  </div>
+
+  <div *ngFor="let menu of menus">
+    <button (click)="getOrder(menu.data)" type="button" class="btn btn-secondary">
+      <span>{{menu.data.nombre}}</span> <br>
+      <span>${{menu.data.precio}}</span>
+    </button>
+  </div>
+</section>

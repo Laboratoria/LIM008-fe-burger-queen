@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {DataService} from '../data.service';
-import { FirestoreService } from '../services/firestore/firestore.service';
+import {DataService} from '../../data.service';
+import { FirestoreService } from '../../services/firestore/firestore.service';
 
 @Component({
   selector: 'app-new-order',
@@ -58,9 +58,11 @@ export class NewOrderComponent implements OnInit {
       }
 
   ngOnInit() {
-        this.firebaseService.getOrderNumber().subscribe(ele => {
-       const abc = ele.map((orderData) => orderData.payload.doc.data());
-       this.orderNumber = abc.length;
+        this.firebaseService.getOrderNumber().subscribe((ele) => {
+/*           ele.forEach((menuData) => {
+              console.log(menuData.payload.doc.data())
+          }) */
+       this.orderNumber = ele.length;
       })       
   }
 }

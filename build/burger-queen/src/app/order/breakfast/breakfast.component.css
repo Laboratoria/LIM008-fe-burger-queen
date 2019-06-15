@@ -1,0 +1,21 @@
+.menu-container {
+  width: 50%;
+  height: 65%;
+}
+
+.menu-content {
+  align-content: center;
+  background: #FFFFFF;
+  border: 1px solid #FF4500;
+  box-sizing: border-box;
+}
+
+.start {
+  background: #F4C903;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: normal;
+  color: #F7F7F7;
+}

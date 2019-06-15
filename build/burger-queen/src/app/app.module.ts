@@ -5,15 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
-import { BreakfastComponent } from './breakfast/breakfast.component';
-import { NewOrderComponent } from './new-order/new-order.component';
+import { BreakfastComponent } from './order/breakfast/breakfast.component';
+import { NewOrderComponent } from './order/new-order/new-order.component';
 import { FormsModule } from '@angular/forms';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
