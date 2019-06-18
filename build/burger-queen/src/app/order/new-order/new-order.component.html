@@ -1,45 +1,53 @@
-<section class="float-right">
-<tr>
-  <th scope="col">Pedido Nro: {{orderNumber +1}}</th>
-</tr>
-<tr>
-  <th scope="col">Fecha:</th>
-</tr>
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Unid</th>
-      <th scope="col">Producto</th>
-      <th scope="col">Precio Unit.</th>
-      <th scope="col">Subtotal</th>
-      <th scope="col">Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of items">
-      <th scope="row">
-        <button (click)="increase(item)"> + </button>
-        <label for="number"></label>
-        <input class="input-width input" type="number" min="1" max="10" value="{{item.quantity}}" required>
-        <button (click)="decrease(item)"> - </button>
-      </th>
-      <td> <span>{{item.nombre}}</span>
-      </td>
-      <td> <span>{{item.precio}}$ </span>
-      </td>
-      <td><span> ${{getSubTotal(item)}}</span>
-      </td>
-      <td> <button (click)=delete(item)> X
-          <img>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row"> <span>TOTAL:${{getTotal(items)}} </span>
-      </th>
-    </tr>
-    <tr> <button (click)=sendOrder(orderNumber+1)>ENVIAR ORDEN</button>
-    </tr>
-  </tbody>
-</table>
+<section class="d-flex justify-content-center section-table ">
+  <div class=" table-product flex-column d-flex ">
+    <div class="p-2">
+      <p scope="col">Pedido Nro: {{orderNumber +1}}</p>
+    </div>
+    <!--   <tr>
+    <th scope="col">Fecha:</th>
+  </tr> -->
+    <table class=" p-2 table w-100">
+      <tbody >
+        <tr class="p-2 w-100" *ngFor="let item of items">
+          <td>
+            <button class="btn" (click)="increase(item)"> + </button>
+            <label for="number"></label>
+            <span class="input-width" type="number" value="" required> {{item.quantity}}</span>
+            <button class="btn" (click)="decrease(item)"> - </button>
+          </td>
+          <td> <span>{{item.nombre}}</span>
+          </td>
+          <td >
+            <div *ngIf= "item.contenido">
+            <input type="radio" name="{{item.id}}" value="{{item.contenido[0]}}">{{item.contenido[0]}}<br>
+            <input type="radio" name="{{item.id}}" value="{{item.contenido[1]}}"> {{item.contenido[1]}}<br>
+            <input type="radio" name="{{item.id}}" value="{{item.contenido[2]}}"> {{item.contenido[2]}}<br>
+          </div> 
+          </td>
+          <td >
+              <div *ngIf= "item.adicional">
+              <input type="checkbox" value="item.adicional[0]">{{item.adicional[0]}}<br>
+              <input type="checkbox" value="item.adicional[1]"> {{item.adicional[1]}}<br>
+            </div> 
+            </td>
+          <!--       <td> <span>{{item.precio}}$ </span>
+      </td> -->
+          <td><span> ${{getSubTotal(item)}}</span>
+          </td>
+          <td> <button class="rounded-circle" (click)=delete(item)> X
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="mt-auto p-2">
+      <tr>
+        <th scope="row"> <span> TOTAL:${{getTotal(items)}} </span>
+        </th>
+      </tr>
+      <tr> <button (click)=sendOrder(orderNumber+1)>ENVIAR ORDEN</button>
+      </tr>
+    </section>
+  </div>
 </section>

@@ -1,13 +1,16 @@
-<section class="menu-container d-flex align-content-stretch flex-wrap" role="group" aria-label="Basic example">
-  <div class="d-flex">
-    <button (click)="showMenu('Desayuno')" class="btn start w-50"> DESAYUNO </button>
-    <button (click)="showMenu('Resto del día')" class="btn start w-50"> RESTO DEL DÍA </button>
+<section role="group" aria-label="Basic example">
+  <div class=" button-ctn-time d-flex w-100 justify-content-around">
+    <button [ngClass]="{'btn-active' : toggleBreak, 'btn-inactive': !toggleBreak}" (click)="showMenu('Desayuno')" class="btn start w-30"> DESAYUNO </button>
+    <button  [ngClass]="{'btn-active' : toggleDay, 'btn-inactive': !toggleDay}" (click)="showMenu('Resto del día')" class="btn start w-30"> RESTO DEL DÍA </button>
   </div>
-
-  <div *ngFor="let menu of menus">
-    <button (click)="getOrder(menu.data)" type="button" class="btn btn-secondary">
-      <span>{{menu.data.nombre}}</span> <br>
-      <span>${{menu.data.precio}}</span>
-    </button>
-  </div>
+  <section class="d-flex flex-wrap justify-content-around align-items-stretch menu-ctn">
+    <div class="d-flex btn-menu-ctn bg-success" *ngFor="let menu of menus">
+      <button (click)="getOrder(menu.data)" type="button " class=" btn-menu btn">
+        <span>{{menu.data.nombre}}</span> <br>
+        <span>${{menu.data.precio}}</span>
+      </button>
+    </div>
+  </section>
 </section>
+
+<!-- menu-container d-flex align-content-stretch flex-wrap [ngStyle]="toggle ? 'btn-active' : 'btn-inactive'"-->

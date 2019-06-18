@@ -1,0 +1,15 @@
+.table-product{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 22px;
+}
+
+.section-table{
+    height: 80%;
+    width: 50%;
+    position: absolute;
+    top: 10%;
+  background-color: #F5DB75;
+  padding:1%;
+}

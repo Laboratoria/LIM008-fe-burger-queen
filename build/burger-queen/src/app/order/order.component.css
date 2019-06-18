@@ -1,21 +1,31 @@
-
-
 .orange {
-    background-color: #FF4500;
+  background-color: #FF4500;
 
 }
-.nav{
-    bottom: 0;
-    width: 100%;
+
+.nav {
+  bottom: 0;
+  width: 100%;
 }
-.sup{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-bottom: 10px;
-    height: 10%;
+
+.sup {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  height: 10%;
 }
-.inf{
-    position: absolute;
+
+.inf {
+  position: absolute;
+}
+
+.section-order {
+  height: 100%;
+  width: 50%;
+}
+
+.background {
+
 }

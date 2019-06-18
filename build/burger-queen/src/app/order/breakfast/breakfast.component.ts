@@ -12,6 +12,8 @@ import { FirestoreService } from '../../services/firestore/firestore.service';
 export class BreakfastComponent implements OnInit {
   menus: any;
   arrayItems: any[] = [];
+  toggleBreak:boolean = false;
+  toggleDay:boolean = false;
 
    constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router, public firebaseService: FirestoreService) {
     this.dataService.currentOrder.subscribe(ele => {
@@ -27,6 +29,7 @@ export class BreakfastComponent implements OnInit {
   ngOnInit() {
   }
   showMenu(schedule: string){
+    schedule === 'Desayuno' ? (this.toggleBreak= true ,this.toggleDay = false) : (this.toggleDay=true, this.toggleBreak=false)
     this.menus = [];
     this.router.navigate(['breakfast'],{relativeTo: this.route});
     this.firebaseService.getMenu(schedule).subscribe(ele => {
@@ -40,6 +43,7 @@ export class BreakfastComponent implements OnInit {
     }
 
   getOrder(order) {
+    this.menus.forEach(ele => console.log(ele.data));
     this.dataService.agregarProd(order);
   }
 }
