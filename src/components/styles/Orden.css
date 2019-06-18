@@ -1,0 +1,108 @@
+.margintop{
+    margin-top: 3%;
+}
+
+.button-count{
+    color: black;
+    background: #ffc107;
+    border: none;
+    font-size: 100%;
+    border-radius: 50%
+  }
+
+.center{
+    text-align: center;
+}
+
+.button-send{
+    background: rgb(146, 8, 8);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 3%
+}
+
+.margin-button-count-sum{
+    margin-right: 2%
+}
+
+.margin-button-count-substr{
+    margin-left: 2%
+}
+
+.button-delete{
+    color: white;
+    background: #CF2728;
+    border: none;
+    border-radius: 50%
+}
+
+input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #333333;
+    width: 30%;
+  }
+
+.margin-option{
+    margin-top: 3%;
+    margin-bottom: 3%
+}
+
+.margin-orden{
+    padding-left: 45%
+}
+
+.margin-total{
+    padding-left: 9%
+}
+
+.font-mayor{
+    font-size: 60%
+}
+
+.marginleft{
+    padding-left: 2%
+}
+
+.ordenmayor{
+    font-size: 130%
+}
+
+.font-menor{
+    font-size: 75%
+}
+
+.margin-cliente{
+    margin-top: 10%
+}
+
+@media only screen and (min-width: 769px) {
+    .font-mayor{
+        font-size: 100%
+    }
+
+    .font-menor{
+        font-size: 100%
+    }
+    .margin-send{
+        margin-left: 10%
+    }
+    .margin-button-count-sum{
+        margin-right: 15%
+    }
+    
+    .margin-button-count-substr{
+        margin-left: 15%
+    }
+    input{
+        background: none;
+        border: none;
+        border-bottom: 2px solid #333333;
+        width: 60%;
+      }
+  }
+
+  
+
+

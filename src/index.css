@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: none;
+  font-family:'Permanent Marker', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+
+@font-face{
+  font-display: swap;
+  font-family:'Permanent Marker', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Mako');
+}
+
+a:hover {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+html{overflow-x: hidden}
+
+

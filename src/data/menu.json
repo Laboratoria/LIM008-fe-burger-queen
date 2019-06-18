@@ -1,0 +1,146 @@
+[{
+  "id": 1,
+  "name": "Sandwich de jamon y queso",
+  "value": 10.00,
+  "option": "Sandwich",
+  "type": "Desayuno",
+  "count":1,
+  "img": "img/1.png"
+},{
+  "id": 2,
+  "name": "Jugo Natural",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Desayuno",
+  "count":1,
+  "img":"img/2.png"
+},{
+  "id": 3,
+  "name": "Café con leche",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Desayuno",
+  "count":1,
+  "img":"img/3.png"
+},{
+  "id": 4,
+  "name": "Café americano",
+  "value": 5.00,
+  "option": "Bebidas",
+  "type": "Desayuno",
+  "count":1,
+  "img":"img/4.png"
+},{
+  "id": 5,
+  "name": "Hamburguesa simple de res",
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/5.png"
+},{
+  "id": 6,
+  "name": "Hamburguesa simple de pollo",
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/6.png"
+  },{
+  "id": 7,
+  "name": "Hamburguesa simple vegetariana",
+  "value": 10.00,
+  "option": "Hamburguesa simple",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/7.png"
+  },{
+  "id": 8,
+  "name": "Hamburguesa doble de res",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/8.png"
+  },{
+  "id": 9,
+  "name": "Hamburguesa doble de pollo",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/9.png"
+  },{
+  "id": 10,
+  "name": "Hamburguesa doble vegetariana",
+  "value": 15.00,
+  "option": "Hamburguesa doble",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/7.png"
+  },{
+  "id": 11,
+  "name": "Papas fritas",
+  "value": 5.00,
+  "option": "Acompañamiento",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/11.png"
+  },{
+  "id": 12,
+  "name": "Aros de cebolla",
+  "value": 5.00,
+  "option": "Acompañamiento",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/12.png"
+  },{
+  "id": 13,
+  "name": "Agua 500 mL",
+  "value": 5.00,
+  "option": "Bebidas",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/13.png"
+  },{
+  "id": 14,  
+  "name": "Agua 750 mL",
+  "value": 8.00,
+  "option": "Bebidas",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/14.png"
+  },{
+  "id": 15,
+  "name": "Gaseosa 500 mL",
+  "value": 7.00,
+  "option": "Bebidas",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/15.png"
+  },{
+  "id": 16,
+  "name": "Gaseosa 750 mL",
+  "value": 10.00,
+  "option": "Bebidas",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/16.png"
+  },{
+  "id": 17,
+  "name": "Queso",
+  "value": 1.00,
+  "option": "Adicional",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/17.png"
+  },{
+  "id": 18,
+  "name": "Huevo",
+  "value": 1.00,
+  "option": "Adicional",
+  "type": "Resto del día",
+  "count":1,
+  "img":"img/18.png"
+    }]
+
